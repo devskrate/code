@@ -1,0 +1,59 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  {% if site.plugins.jekyll-seo == nil %}
+    <title>{{ page.title }} - {{ site.title }}</title>
+
+    {% if page.description %}
+      <meta name="Description" content="{{ page.description }}">
+    {% endif %}
+  {% endif %}
+
+  <link rel="shortcut icon" href="{{ 'favicon.ico' | absolute_url }}" type="image/x-icon">
+
+  <link rel="stylesheet" href="{{ '/assets/css/just-the-docs.css' | absolute_url }}">
+
+  {% if site.ga_tracking != nil %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_tracking }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', "{{ site.ga_tracking }}");
+    </script>
+
+  {% endif %}
+
+  {% if site.search_enabled != false %}
+    <script type="text/javascript" src="{{ '/assets/js/vendor/lunr.min.js' | absolute_url }}"></script>
+  {% endif %}
+  <script type="text/javascript" src="{{ '/assets/js/just-the-docs.js' | absolute_url }}"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% seo %}
+
+  {% include head_custom.html %}
+<!--Dark mode JS-->
+<script src="../assets/js/dark-mode.js"></script>
+<script>
+  var options = {
+  bottom: '20px', // default: '32px'
+  right: 'unset', // default: '32px'
+  left: '20px', // default: 'unset'
+  time: '0.3s', // default: '0.3s'
+  mixColor: '#fff', // default: '#fff'
+  backgroundColor: '#fff',  // default: '#fff'
+  buttonColorDark: '#100f2c',  // default: '#100f2c'
+  buttonColorLight: '#fff', // default: '#fff'
+  saveInCookies: true, // default: true,
+  label: '🌓', // default: ''
+  autoMatchOsTheme: false // default: true
+}
+
+const darkmode = new Darkmode(options);
+darkmode.showWidget();
+</script>
+</head>

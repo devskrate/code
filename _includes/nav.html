@@ -1,0 +1,26 @@
+<nav role="navigation" aria-label="Main navigation">
+    {% if page.url == "/" %}
+    <ul class="navigation-list">
+      <li class="navigation-list-item active"><a href="" class="navigation-list-link active">Home</a>
+      </li>
+      <li class="navigation-list-item"><a href="" class="navigation-list-link">Python</a>
+      </li>
+      <li class="navigation-list-item"><a href="" class="navigation-list-link">Go</a>
+      </li>
+    </ul>
+    {% else if page.url == "/go/demo" %}
+    <ul class="navigation-list">
+      {% assign sorted = (site.go | sort: 'date') | reverse %}
+      {% for post in sorted %}
+        {% if post.url == page.url %}
+          <li class="navigation-list-item active"><a href="{{site.baseurl}}{{post.url}}" class="navigation-list-link active">{{post.title}}</a>
+          </li>
+        {% else %}
+          <li class="navigation-list-item"><a href="{{site.baseurl}}{{post.url}}" class="navigation-list-link">{{post.title}}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </ul>
+</nav>
