@@ -8,10 +8,10 @@
       <li class="navigation-list-item"><a href="{{site.baseurl}}/go/demo" class="navigation-list-link">Go</a>
       </li>
     </ul>
-    {% else if page.url == "/go/demo" %}
+    {% elsif page.collection == "go" %}
     <ul class="navigation-list">
-      {% assign sorted = (site.go | sort: 'date') | reverse %}
-      {% for post in sorted %}
+      {% assign go_sorted = (site.go | sort: 'date') | reverse %}
+      {% for post in go_sorted %}
         {% if post.url == page.url %}
           <li class="navigation-list-item active"><a href="{{site.baseurl}}{{post.url}}" class="navigation-list-link active">{{post.title}}</a>
           </li>
@@ -21,19 +21,18 @@
         {% endif %}
       {% endfor %}
     </ul>
-    {% else if page.url == "/python/demo" %}
+    {% elsif page.collection == "python" %}
     <ul class="navigation-list">
-      {% assign sorted = (site.python | sort: 'date') | reverse %}
-      {% for post in sorted %}
-        {% if post.url == page.url %}
-          <li class="navigation-list-item active"><a href="{{site.baseurl}}{{post.url}}" class="navigation-list-link active">{{post.title}}</a>
+      {% assign python_sorted = (site.python | sort: 'date') | reverse %}
+      {% for python_post in python_sorted %}
+        {% if python_post.url == page.url %}
+          <li class="navigation-list-item active"><a href="{{site.baseurl}}{{python_post.url}}" class="navigation-list-link active">{{python_post.title}}</a>
           </li>
         {% else %}
-          <li class="navigation-list-item"><a href="{{site.baseurl}}{{post.url}}" class="navigation-list-link">{{post.title}}</a>
+          <li class="navigation-list-item"><a href="{{site.baseurl}}{{python_post.url}}" class="navigation-list-link">{{python_post.title}}</a>
           </li>
         {% endif %}
       {% endfor %}
     </ul>
     {% endif %}
-  </ul>
 </nav>

@@ -56,6 +56,7 @@ color_scheme: nil
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-toc
 
 compress_html:
   clippings: all
@@ -66,3 +67,7 @@ compress_html:
   profile: false
 
 highlighter: rouge
+
+toc:
+  min_level: 2 # default: 1
+  #max_level: 5 # default: 6
