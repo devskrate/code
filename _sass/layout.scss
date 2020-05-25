@@ -32,7 +32,8 @@
   }
 
   @include mq(lg) {
-    width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width});
+    width: 20%;
+    //calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width});
     min-width: $nav-width;
   }
 }
@@ -53,14 +54,16 @@
 .main-content {
   @include mq(md) {
     position: relative;
-    max-width: $content-width;
+    max-width: 55%;
+    //$content-width;
     margin-left: $nav-width-md;
   }
 
   @include mq(lg) {
-    margin-left: calc(
+    margin-left: 20%;
+    /*calc(
       (100% - #{$nav-width + $content-width}) / 2 + #{$nav-width}
-    );
+    );*/
   }
 }
 

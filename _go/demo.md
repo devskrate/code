@@ -6,11 +6,17 @@ nav_order: 8
 # Introduction to Go
 
 ### About the Tutorial
+```go
+package main
+import "fmt"
+// this is a comment
+func main() {
+ fmt.Println("Hello World")
+}
+```
 
-
-
-
-
+<p><button class="btn js-toggle-dark-mode">Preview dark color scheme</button></p>
+<script type="text/javascript" src="https://pmarsceill.github.io/just-the-docs/assets/js/dark-mode-preview.js"></script>
 
 
 ### What is Go?

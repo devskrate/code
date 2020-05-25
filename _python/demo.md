@@ -1,0 +1,7887 @@
+---
+layout: default
+title: Demo book
+nav_order: 8
+---
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="../assets/python-notebook.css">
+  <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Create-A-Series-Object-from-A-Python-List">Create A <code>Series</code> Object from A Python List<a class="anchor-link" href="#Create-A-Series-Object-from-A-Python-List">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">ice_cream</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Chocolate&quot;</span><span class="p">,</span> <span class="s2">&quot;Vanilla&quot;</span><span class="p">,</span> <span class="s2">&quot;Strawberry&quot;</span><span class="p">,</span> <span class="s2">&quot;Rum Raisin&quot;</span><span class="p">]</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">ice_cream</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[5]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0     Chocolate
+1       Vanilla
+2    Strawberry
+3    Rum Raisin
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">lottery</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">42</span><span class="p">]</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">lottery</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[6]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0     4
+1     8
+2    15
+3    16
+4    23
+5    42
+dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">registrations</span> <span class="o">=</span> <span class="p">[</span><span class="bp">True</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">]</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">registrations</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[7]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0     True
+1    False
+2    False
+3    False
+4     True
+dtype: bool</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Create-A-Series-Object-from-a-Dictionary">Create A <code>Series</code> Object from a Dictionary<a class="anchor-link" href="#Create-A-Series-Object-from-a-Dictionary">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">webster</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aardvark&quot;</span> <span class="p">:</span> <span class="s2">&quot;An animal&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;Banana&quot;</span> <span class="p">:</span> <span class="s2">&quot;A delicious fruit&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;Cyan&quot;</span> <span class="p">:</span> <span class="s2">&quot;A color&quot;</span><span class="p">}</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">webster</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[5]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Aardvark            An animal
+Banana      A delicious fruit
+Cyan                  A color
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Intro-to-Attributes">Intro to Attributes<a class="anchor-link" href="#Intro-to-Attributes">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">about_me</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Smart&quot;</span><span class="p">,</span> <span class="s2">&quot;Handsome&quot;</span><span class="p">,</span> <span class="s2">&quot;Charming&quot;</span><span class="p">,</span> <span class="s2">&quot;Brilliant&quot;</span><span class="p">,</span> <span class="s2">&quot;Humble&quot;</span><span class="p">]</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">about_me</span><span class="p">)</span>
+<span class="n">s</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0        Smart
+1     Handsome
+2     Charming
+3    Brilliant
+4       Humble
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[9]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([&#39;Smart&#39;, &#39;Handsome&#39;, &#39;Charming&#39;, &#39;Brilliant&#39;, &#39;Humble&#39;], dtype=object)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">index</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[10]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>RangeIndex(start=0, stop=5, step=1)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">dtype</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[11]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>dtype(&#39;O&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Intro-to-Methods">Intro to Methods<a class="anchor-link" href="#Intro-to-Methods">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">prices</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2.99</span><span class="p">,</span> <span class="mf">4.45</span><span class="p">,</span> <span class="mf">1.36</span><span class="p">]</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
+<span class="n">s</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    2.99
+1    4.45
+2    1.36
+dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[14]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>8.8</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">product</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[15]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>18.095480000000006</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[16]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2.9333333333333336</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Parameters-and-Arguments">Parameters and Arguments<a class="anchor-link" href="#Parameters-and-Arguments">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Difficulty - Easy, Medium, Hard</span>
+<span class="c1"># Volume - 1 through 10</span>
+<span class="c1"># Subtitles - True / False</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Apple&quot;</span><span class="p">,</span> <span class="s2">&quot;Orange&quot;</span><span class="p">,</span> <span class="s2">&quot;Plum&quot;</span><span class="p">,</span> <span class="s2">&quot;Grape&quot;</span><span class="p">,</span> <span class="s2">&quot;Blueberry&quot;</span><span class="p">]</span>
+<span class="n">weekdays</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Monday&quot;</span><span class="p">,</span> <span class="s2">&quot;Tuesday&quot;</span><span class="p">,</span> <span class="s2">&quot;Wednesday&quot;</span><span class="p">,</span> <span class="s2">&quot;Thursday&quot;</span><span class="p">,</span> <span class="s2">&quot;Friday&quot;</span><span class="p">]</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">fruits</span><span class="p">,</span> <span class="n">weekdays</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">fruits</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="n">weekdays</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">fruits</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="n">weekdays</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[21]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Monday           Apple
+Tuesday         Orange
+Wednesday         Plum
+Thursday         Grape
+Friday       Blueberry
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Apple&quot;</span><span class="p">,</span> <span class="s2">&quot;Orange&quot;</span><span class="p">,</span> <span class="s2">&quot;Plum&quot;</span><span class="p">,</span> <span class="s2">&quot;Grape&quot;</span><span class="p">,</span> <span class="s2">&quot;Blueberry&quot;</span><span class="p">,</span> <span class="s2">&quot;Watermelon&quot;</span><span class="p">]</span>
+<span class="n">weekdays</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Monday&quot;</span><span class="p">,</span> <span class="s2">&quot;Tuesday&quot;</span><span class="p">,</span> <span class="s2">&quot;Wednesday&quot;</span><span class="p">,</span> <span class="s2">&quot;Thursday&quot;</span><span class="p">,</span> <span class="s2">&quot;Friday&quot;</span><span class="p">,</span> <span class="s2">&quot;Monday&quot;</span><span class="p">]</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">fruits</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="n">weekdays</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[22]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Monday            Apple
+Tuesday          Orange
+Wednesday          Plum
+Thursday          Grape
+Friday        Blueberry
+Monday       Watermelon
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Import-Series-with-the-read_csv-Method">Import <code>Series</code> with the <code>read_csv</code> Method<a class="anchor-link" href="#Import-Series-with-the-read_csv-Method">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;pokemon.csv&quot;</span><span class="p">,</span> <span class="n">usecols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Pokemon&quot;</span><span class="p">],</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">pokemon</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[27]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0       Bulbasaur
+1         Ivysaur
+2        Venusaur
+3      Charmander
+4      Charmeleon
+5       Charizard
+6        Squirtle
+7       Wartortle
+8       Blastoise
+9        Caterpie
+10        Metapod
+11     Butterfree
+12         Weedle
+13         Kakuna
+14       Beedrill
+15         Pidgey
+16      Pidgeotto
+17        Pidgeot
+18        Rattata
+19       Raticate
+20        Spearow
+21         Fearow
+22          Ekans
+23          Arbok
+24        Pikachu
+25         Raichu
+26      Sandshrew
+27      Sandslash
+28        Nidoran
+29       Nidorina
+          ...    
+691     Clauncher
+692     Clawitzer
+693    Helioptile
+694     Heliolisk
+695        Tyrunt
+696     Tyrantrum
+697        Amaura
+698       Aurorus
+699       Sylveon
+700      Hawlucha
+701       Dedenne
+702       Carbink
+703         Goomy
+704       Sliggoo
+705        Goodra
+706        Klefki
+707      Phantump
+708     Trevenant
+709     Pumpkaboo
+710     Gourgeist
+711      Bergmite
+712       Avalugg
+713        Noibat
+714       Noivern
+715       Xerneas
+716       Yveltal
+717       Zygarde
+718       Diancie
+719         Hoopa
+720     Volcanion
+Name: Pokemon, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;google_stock_price.csv&quot;</span><span class="p">,</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">google</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[30]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0        50.12
+1        54.10
+2        54.65
+3        52.38
+4        52.95
+5        53.90
+6        53.02
+7        50.95
+8        51.13
+9        50.07
+10       50.70
+11       49.95
+12       50.74
+13       51.10
+14       51.10
+15       52.61
+16       53.70
+17       55.69
+18       55.94
+19       56.93
+20       58.69
+21       59.62
+22       58.86
+23       59.13
+24       60.35
+25       59.86
+26       59.07
+27       63.37
+28       65.47
+29       64.74
+         ...  
+2982    675.22
+2983    668.26
+2984    680.04
+2985    684.11
+2986    692.10
+2987    699.21
+2988    694.49
+2989    697.77
+2990    695.36
+2991    705.63
+2992    715.09
+2993    720.64
+2994    716.98
+2995    720.95
+2996    719.85
+2997    733.78
+2998    736.96
+2999    741.19
+3000    738.63
+3001    742.74
+3002    739.77
+3003    738.42
+3004    741.77
+3005    745.91
+3006    768.79
+3007    772.88
+3008    771.07
+3009    773.18
+3010    771.61
+3011    782.22
+Name: Stock Price, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="The-.head()-and-.tail()-Methods">The <code>.head()</code> and <code>.tail()</code> Methods<a class="anchor-link" href="#The-.head()-and-.tail()-Methods">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;pokemon.csv&quot;</span><span class="p">,</span> <span class="n">usecols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Pokemon&quot;</span><span class="p">],</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">google</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;google_stock_price.csv&quot;</span><span class="p">,</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[36]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    Bulbasaur
+Name: Pokemon, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[40]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3011    782.22
+Name: Stock Price, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Python-Built-In-Functions">Python Built-In Functions<a class="anchor-link" href="#Python-Built-In-Functions">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;pokemon.csv&quot;</span><span class="p">,</span> <span class="n">usecols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Pokemon&quot;</span><span class="p">],</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">google</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;google_stock_price.csv&quot;</span><span class="p">,</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">pokemon</span><span class="p">)</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">google</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[56]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3012</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">pokemon</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[57]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>pandas.core.series.Series</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">pokemon</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[58]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;T&#39;,
+ &#39;_AXIS_ALIASES&#39;,
+ &#39;_AXIS_IALIASES&#39;,
+ &#39;_AXIS_LEN&#39;,
+ &#39;_AXIS_NAMES&#39;,
+ &#39;_AXIS_NUMBERS&#39;,
+ &#39;_AXIS_ORDERS&#39;,
+ &#39;_AXIS_REVERSED&#39;,
+ &#39;_AXIS_SLICEMAP&#39;,
+ &#39;__abs__&#39;,
+ &#39;__add__&#39;,
+ &#39;__and__&#39;,
+ &#39;__array__&#39;,
+ &#39;__array_prepare__&#39;,
+ &#39;__array_priority__&#39;,
+ &#39;__array_wrap__&#39;,
+ &#39;__bool__&#39;,
+ &#39;__bytes__&#39;,
+ &#39;__class__&#39;,
+ &#39;__contains__&#39;,
+ &#39;__delattr__&#39;,
+ &#39;__delitem__&#39;,
+ &#39;__dict__&#39;,
+ &#39;__dir__&#39;,
+ &#39;__div__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__eq__&#39;,
+ &#39;__finalize__&#39;,
+ &#39;__float__&#39;,
+ &#39;__floordiv__&#39;,
+ &#39;__format__&#39;,
+ &#39;__ge__&#39;,
+ &#39;__getattr__&#39;,
+ &#39;__getattribute__&#39;,
+ &#39;__getitem__&#39;,
+ &#39;__getstate__&#39;,
+ &#39;__gt__&#39;,
+ &#39;__hash__&#39;,
+ &#39;__iadd__&#39;,
+ &#39;__imul__&#39;,
+ &#39;__init__&#39;,
+ &#39;__int__&#39;,
+ &#39;__invert__&#39;,
+ &#39;__ipow__&#39;,
+ &#39;__isub__&#39;,
+ &#39;__iter__&#39;,
+ &#39;__itruediv__&#39;,
+ &#39;__le__&#39;,
+ &#39;__len__&#39;,
+ &#39;__long__&#39;,
+ &#39;__lt__&#39;,
+ &#39;__mod__&#39;,
+ &#39;__module__&#39;,
+ &#39;__mul__&#39;,
+ &#39;__ne__&#39;,
+ &#39;__neg__&#39;,
+ &#39;__new__&#39;,
+ &#39;__nonzero__&#39;,
+ &#39;__or__&#39;,
+ &#39;__pow__&#39;,
+ &#39;__radd__&#39;,
+ &#39;__rand__&#39;,
+ &#39;__rdiv__&#39;,
+ &#39;__reduce__&#39;,
+ &#39;__reduce_ex__&#39;,
+ &#39;__repr__&#39;,
+ &#39;__rfloordiv__&#39;,
+ &#39;__rmod__&#39;,
+ &#39;__rmul__&#39;,
+ &#39;__ror__&#39;,
+ &#39;__round__&#39;,
+ &#39;__rpow__&#39;,
+ &#39;__rsub__&#39;,
+ &#39;__rtruediv__&#39;,
+ &#39;__rxor__&#39;,
+ &#39;__setattr__&#39;,
+ &#39;__setitem__&#39;,
+ &#39;__setstate__&#39;,
+ &#39;__sizeof__&#39;,
+ &#39;__str__&#39;,
+ &#39;__sub__&#39;,
+ &#39;__subclasshook__&#39;,
+ &#39;__truediv__&#39;,
+ &#39;__unicode__&#39;,
+ &#39;__weakref__&#39;,
+ &#39;__xor__&#39;,
+ &#39;_accessors&#39;,
+ &#39;_add_numeric_operations&#39;,
+ &#39;_add_series_only_operations&#39;,
+ &#39;_add_series_or_dataframe_operations&#39;,
+ &#39;_agg_by_level&#39;,
+ &#39;_align_frame&#39;,
+ &#39;_align_series&#39;,
+ &#39;_allow_index_ops&#39;,
+ &#39;_at&#39;,
+ &#39;_binop&#39;,
+ &#39;_box_item_values&#39;,
+ &#39;_can_hold_na&#39;,
+ &#39;_check_inplace_setting&#39;,
+ &#39;_check_is_chained_assignment_possible&#39;,
+ &#39;_check_percentile&#39;,
+ &#39;_check_setitem_copy&#39;,
+ &#39;_clear_item_cache&#39;,
+ &#39;_consolidate_inplace&#39;,
+ &#39;_construct_axes_dict&#39;,
+ &#39;_construct_axes_dict_for_slice&#39;,
+ &#39;_construct_axes_dict_from&#39;,
+ &#39;_construct_axes_from_arguments&#39;,
+ &#39;_constructor&#39;,
+ &#39;_constructor_expanddim&#39;,
+ &#39;_constructor_sliced&#39;,
+ &#39;_convert&#39;,
+ &#39;_create_indexer&#39;,
+ &#39;_dir_additions&#39;,
+ &#39;_dir_deletions&#39;,
+ &#39;_expand_axes&#39;,
+ &#39;_from_axes&#39;,
+ &#39;_get_axis&#39;,
+ &#39;_get_axis_name&#39;,
+ &#39;_get_axis_number&#39;,
+ &#39;_get_axis_resolvers&#39;,
+ &#39;_get_block_manager_axis&#39;,
+ &#39;_get_bool_data&#39;,
+ &#39;_get_cacher&#39;,
+ &#39;_get_index_resolvers&#39;,
+ &#39;_get_item_cache&#39;,
+ &#39;_get_numeric_data&#39;,
+ &#39;_get_repr&#39;,
+ &#39;_get_values&#39;,
+ &#39;_get_values_tuple&#39;,
+ &#39;_get_with&#39;,
+ &#39;_iat&#39;,
+ &#39;_iget_item_cache&#39;,
+ &#39;_iloc&#39;,
+ &#39;_index&#39;,
+ &#39;_indexed_same&#39;,
+ &#39;_info_axis&#39;,
+ &#39;_info_axis_name&#39;,
+ &#39;_info_axis_number&#39;,
+ &#39;_init_mgr&#39;,
+ &#39;_internal_names&#39;,
+ &#39;_internal_names_set&#39;,
+ &#39;_is_cached&#39;,
+ &#39;_is_datelike_mixed_type&#39;,
+ &#39;_is_mixed_type&#39;,
+ &#39;_is_numeric_mixed_type&#39;,
+ &#39;_is_view&#39;,
+ &#39;_ix&#39;,
+ &#39;_ixs&#39;,
+ &#39;_loc&#39;,
+ &#39;_make_cat_accessor&#39;,
+ &#39;_make_dt_accessor&#39;,
+ &#39;_make_str_accessor&#39;,
+ &#39;_maybe_cache_changed&#39;,
+ &#39;_maybe_update_cacher&#39;,
+ &#39;_metadata&#39;,
+ &#39;_needs_reindex_multi&#39;,
+ &#39;_protect_consolidate&#39;,
+ &#39;_reduce&#39;,
+ &#39;_reindex_axes&#39;,
+ &#39;_reindex_axis&#39;,
+ &#39;_reindex_indexer&#39;,
+ &#39;_reindex_multi&#39;,
+ &#39;_reindex_with_indexers&#39;,
+ &#39;_reset_cache&#39;,
+ &#39;_reset_cacher&#39;,
+ &#39;_set_as_cached&#39;,
+ &#39;_set_axis&#39;,
+ &#39;_set_axis_name&#39;,
+ &#39;_set_is_copy&#39;,
+ &#39;_set_item&#39;,
+ &#39;_set_labels&#39;,
+ &#39;_set_name&#39;,
+ &#39;_set_subtyp&#39;,
+ &#39;_set_values&#39;,
+ &#39;_set_with&#39;,
+ &#39;_set_with_engine&#39;,
+ &#39;_setup_axes&#39;,
+ &#39;_slice&#39;,
+ &#39;_stat_axis&#39;,
+ &#39;_stat_axis_name&#39;,
+ &#39;_stat_axis_number&#39;,
+ &#39;_typ&#39;,
+ &#39;_unpickle_series_compat&#39;,
+ &#39;_update_inplace&#39;,
+ &#39;_validate_dtype&#39;,
+ &#39;_values&#39;,
+ &#39;_xs&#39;,
+ &#39;abs&#39;,
+ &#39;add&#39;,
+ &#39;add_prefix&#39;,
+ &#39;add_suffix&#39;,
+ &#39;align&#39;,
+ &#39;all&#39;,
+ &#39;any&#39;,
+ &#39;append&#39;,
+ &#39;apply&#39;,
+ &#39;argmax&#39;,
+ &#39;argmin&#39;,
+ &#39;argsort&#39;,
+ &#39;as_blocks&#39;,
+ &#39;as_matrix&#39;,
+ &#39;asfreq&#39;,
+ &#39;asobject&#39;,
+ &#39;asof&#39;,
+ &#39;astype&#39;,
+ &#39;at&#39;,
+ &#39;at_time&#39;,
+ &#39;autocorr&#39;,
+ &#39;axes&#39;,
+ &#39;base&#39;,
+ &#39;between&#39;,
+ &#39;between_time&#39;,
+ &#39;bfill&#39;,
+ &#39;blocks&#39;,
+ &#39;bool&#39;,
+ &#39;clip&#39;,
+ &#39;clip_lower&#39;,
+ &#39;clip_upper&#39;,
+ &#39;combine&#39;,
+ &#39;combine_first&#39;,
+ &#39;compound&#39;,
+ &#39;compress&#39;,
+ &#39;consolidate&#39;,
+ &#39;convert_objects&#39;,
+ &#39;copy&#39;,
+ &#39;corr&#39;,
+ &#39;count&#39;,
+ &#39;cov&#39;,
+ &#39;cummax&#39;,
+ &#39;cummin&#39;,
+ &#39;cumprod&#39;,
+ &#39;cumsum&#39;,
+ &#39;data&#39;,
+ &#39;describe&#39;,
+ &#39;diff&#39;,
+ &#39;div&#39;,
+ &#39;divide&#39;,
+ &#39;dot&#39;,
+ &#39;drop&#39;,
+ &#39;drop_duplicates&#39;,
+ &#39;dropna&#39;,
+ &#39;dtype&#39;,
+ &#39;dtypes&#39;,
+ &#39;duplicated&#39;,
+ &#39;empty&#39;,
+ &#39;eq&#39;,
+ &#39;equals&#39;,
+ &#39;ewm&#39;,
+ &#39;expanding&#39;,
+ &#39;factorize&#39;,
+ &#39;ffill&#39;,
+ &#39;fillna&#39;,
+ &#39;filter&#39;,
+ &#39;first&#39;,
+ &#39;first_valid_index&#39;,
+ &#39;flags&#39;,
+ &#39;floordiv&#39;,
+ &#39;from_array&#39;,
+ &#39;from_csv&#39;,
+ &#39;ftype&#39;,
+ &#39;ftypes&#39;,
+ &#39;ge&#39;,
+ &#39;get&#39;,
+ &#39;get_dtype_counts&#39;,
+ &#39;get_ftype_counts&#39;,
+ &#39;get_value&#39;,
+ &#39;get_values&#39;,
+ &#39;groupby&#39;,
+ &#39;gt&#39;,
+ &#39;hasnans&#39;,
+ &#39;head&#39;,
+ &#39;hist&#39;,
+ &#39;iat&#39;,
+ &#39;idxmax&#39;,
+ &#39;idxmin&#39;,
+ &#39;iget&#39;,
+ &#39;iget_value&#39;,
+ &#39;iloc&#39;,
+ &#39;imag&#39;,
+ &#39;index&#39;,
+ &#39;interpolate&#39;,
+ &#39;irow&#39;,
+ &#39;is_copy&#39;,
+ &#39;is_time_series&#39;,
+ &#39;is_unique&#39;,
+ &#39;isin&#39;,
+ &#39;isnull&#39;,
+ &#39;item&#39;,
+ &#39;items&#39;,
+ &#39;itemsize&#39;,
+ &#39;iteritems&#39;,
+ &#39;iterkv&#39;,
+ &#39;ix&#39;,
+ &#39;keys&#39;,
+ &#39;kurt&#39;,
+ &#39;kurtosis&#39;,
+ &#39;last&#39;,
+ &#39;last_valid_index&#39;,
+ &#39;le&#39;,
+ &#39;loc&#39;,
+ &#39;lt&#39;,
+ &#39;mad&#39;,
+ &#39;map&#39;,
+ &#39;mask&#39;,
+ &#39;max&#39;,
+ &#39;mean&#39;,
+ &#39;median&#39;,
+ &#39;memory_usage&#39;,
+ &#39;min&#39;,
+ &#39;mod&#39;,
+ &#39;mode&#39;,
+ &#39;mul&#39;,
+ &#39;multiply&#39;,
+ &#39;name&#39;,
+ &#39;nbytes&#39;,
+ &#39;ndim&#39;,
+ &#39;ne&#39;,
+ &#39;nlargest&#39;,
+ &#39;nonzero&#39;,
+ &#39;notnull&#39;,
+ &#39;nsmallest&#39;,
+ &#39;nunique&#39;,
+ &#39;order&#39;,
+ &#39;pct_change&#39;,
+ &#39;pipe&#39;,
+ &#39;plot&#39;,
+ &#39;pop&#39;,
+ &#39;pow&#39;,
+ &#39;prod&#39;,
+ &#39;product&#39;,
+ &#39;ptp&#39;,
+ &#39;put&#39;,
+ &#39;quantile&#39;,
+ &#39;radd&#39;,
+ &#39;rank&#39;,
+ &#39;ravel&#39;,
+ &#39;rdiv&#39;,
+ &#39;real&#39;,
+ &#39;reindex&#39;,
+ &#39;reindex_axis&#39;,
+ &#39;reindex_like&#39;,
+ &#39;rename&#39;,
+ &#39;rename_axis&#39;,
+ &#39;reorder_levels&#39;,
+ &#39;repeat&#39;,
+ &#39;replace&#39;,
+ &#39;resample&#39;,
+ &#39;reset_index&#39;,
+ &#39;reshape&#39;,
+ &#39;rfloordiv&#39;,
+ &#39;rmod&#39;,
+ &#39;rmul&#39;,
+ &#39;rolling&#39;,
+ &#39;round&#39;,
+ &#39;rpow&#39;,
+ &#39;rsub&#39;,
+ &#39;rtruediv&#39;,
+ &#39;sample&#39;,
+ &#39;searchsorted&#39;,
+ &#39;select&#39;,
+ &#39;sem&#39;,
+ &#39;set_axis&#39;,
+ &#39;set_value&#39;,
+ &#39;shape&#39;,
+ &#39;shift&#39;,
+ &#39;size&#39;,
+ &#39;skew&#39;,
+ &#39;slice_shift&#39;,
+ &#39;sort&#39;,
+ &#39;sort_index&#39;,
+ &#39;sort_values&#39;,
+ &#39;sortlevel&#39;,
+ &#39;squeeze&#39;,
+ &#39;std&#39;,
+ &#39;str&#39;,
+ &#39;strides&#39;,
+ &#39;sub&#39;,
+ &#39;subtract&#39;,
+ &#39;sum&#39;,
+ &#39;swapaxes&#39;,
+ &#39;swaplevel&#39;,
+ &#39;tail&#39;,
+ &#39;take&#39;,
+ &#39;to_clipboard&#39;,
+ &#39;to_csv&#39;,
+ &#39;to_dense&#39;,
+ &#39;to_dict&#39;,
+ &#39;to_frame&#39;,
+ &#39;to_hdf&#39;,
+ &#39;to_json&#39;,
+ &#39;to_msgpack&#39;,
+ &#39;to_period&#39;,
+ &#39;to_pickle&#39;,
+ &#39;to_sparse&#39;,
+ &#39;to_sql&#39;,
+ &#39;to_string&#39;,
+ &#39;to_timestamp&#39;,
+ &#39;to_xarray&#39;,
+ &#39;tolist&#39;,
+ &#39;transpose&#39;,
+ &#39;truediv&#39;,
+ &#39;truncate&#39;,
+ &#39;tshift&#39;,
+ &#39;tz_convert&#39;,
+ &#39;tz_localize&#39;,
+ &#39;unique&#39;,
+ &#39;unstack&#39;,
+ &#39;update&#39;,
+ &#39;valid&#39;,
+ &#39;value_counts&#39;,
+ &#39;values&#39;,
+ &#39;var&#39;,
+ &#39;view&#39;,
+ &#39;where&#39;,
+ &#39;xs&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">sorted</span><span class="p">(</span><span class="n">pokemon</span><span class="p">)</span>
+<span class="nb">sorted</span><span class="p">(</span><span class="n">google</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[60]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[49.950000000000003,
+ 50.07,
+ 50.119999999999997,
+ 50.700000000000003,
+ 50.740000000000002,
+ 50.950000000000003,
+ 51.100000000000001,
+ 51.100000000000001,
+ 51.130000000000003,
+ 52.380000000000003,
+ 52.609999999999999,
+ 52.950000000000003,
+ 53.020000000000003,
+ 53.700000000000003,
+ 53.899999999999999,
+ 54.100000000000001,
+ 54.649999999999999,
+ 55.689999999999998,
+ 55.939999999999998,
+ 56.93,
+ 58.689999999999998,
+ 58.859999999999999,
+ 59.07,
+ 59.130000000000003,
+ 59.619999999999997,
+ 59.859999999999999,
+ 60.350000000000001,
+ 63.369999999999997,
+ 64.739999999999995,
+ 65.469999999999999,
+ 66.219999999999999,
+ 67.459999999999994,
+ 67.560000000000002,
+ 68.469999999999999,
+ 68.629999999999995,
+ 68.799999999999997,
+ 69.120000000000005,
+ 69.359999999999999,
+ 70.170000000000002,
+ 70.379999999999995,
+ 70.930000000000007,
+ 71.980000000000004,
+ 73.900000000000006,
+ 74.510000000000005,
+ 74.620000000000005,
+ 82.469999999999999,
+ 83.680000000000007,
+ 83.689999999999998,
+ 83.849999999999994,
+ 84.269999999999996,
+ 84.590000000000003,
+ 84.620000000000005,
+ 84.909999999999997,
+ 85.140000000000001,
+ 85.629999999999995,
+ 85.739999999999995,
+ 86.129999999999995,
+ 86.159999999999997,
+ 86.189999999999998,
+ 86.189999999999998,
+ 86.629999999999995,
+ 87.290000000000006,
+ 87.409999999999997,
+ 87.709999999999994,
+ 88.060000000000002,
+ 88.150000000000006,
+ 88.469999999999999,
+ 88.810000000000002,
+ 89.209999999999994,
+ 89.219999999999999,
+ 89.260000000000005,
+ 89.400000000000006,
+ 89.540000000000006,
+ 89.560000000000002,
+ 89.609999999999999,
+ 89.609999999999999,
+ 89.700000000000003,
+ 89.799999999999997,
+ 89.890000000000001,
+ 89.900000000000006,
+ 89.930000000000007,
+ 89.930000000000007,
+ 89.950000000000003,
+ 90.109999999999999,
+ 90.129999999999995,
+ 90.159999999999997,
+ 90.269999999999996,
+ 90.349999999999994,
+ 90.430000000000007,
+ 90.579999999999998,
+ 90.620000000000005,
+ 90.810000000000002,
+ 90.900000000000006,
+ 90.909999999999997,
+ 91.420000000000002,
+ 91.780000000000001,
+ 92.260000000000005,
+ 92.340000000000003,
+ 92.409999999999997,
+ 92.420000000000002,
+ 92.5,
+ 92.510000000000005,
+ 92.549999999999997,
+ 92.840000000000003,
+ 92.859999999999999,
+ 92.890000000000001,
+ 92.939999999999998,
+ 93.060000000000002,
+ 93.390000000000001,
+ 93.409999999999997,
+ 93.609999999999999,
+ 93.609999999999999,
+ 93.859999999999999,
+ 93.900000000000006,
+ 93.900000000000006,
+ 93.950000000000003,
+ 94.049999999999997,
+ 94.180000000000007,
+ 94.189999999999998,
+ 94.310000000000002,
+ 94.349999999999994,
+ 94.519999999999996,
+ 94.530000000000001,
+ 95.069999999999993,
+ 95.219999999999999,
+ 95.590000000000003,
+ 95.599999999999994,
+ 95.629999999999995,
+ 95.689999999999998,
+ 95.739999999999995,
+ 95.849999999999994,
+ 95.859999999999999,
+ 95.930000000000007,
+ 96.280000000000001,
+ 96.299999999999997,
+ 96.349999999999994,
+ 96.370000000000005,
+ 96.400000000000006,
+ 96.519999999999996,
+ 96.549999999999997,
+ 96.659999999999997,
+ 96.670000000000002,
+ 96.780000000000001,
+ 96.829999999999998,
+ 96.859999999999999,
+ 96.879999999999995,
+ 96.879999999999995,
+ 97.150000000000006,
+ 97.340000000000003,
+ 97.430000000000007,
+ 97.519999999999996,
+ 97.569999999999993,
+ 97.590000000000003,
+ 97.709999999999994,
+ 97.920000000000002,
+ 97.920000000000002,
+ 98.549999999999997,
+ 98.700000000000003,
+ 98.849999999999994,
+ 98.879999999999995,
+ 98.950000000000003,
+ 99.109999999999999,
+ 99.219999999999999,
+ 99.890000000000001,
+ 101.25,
+ 101.84999999999999,
+ 102.01000000000001,
+ 102.08,
+ 102.88,
+ 105.31999999999999,
+ 107.8,
+ 109.27,
+ 109.62,
+ 109.78,
+ 109.89,
+ 111.03,
+ 111.65000000000001,
+ 112.90000000000001,
+ 112.98,
+ 113.38,
+ 113.79000000000001,
+ 113.90000000000001,
+ 114.14,
+ 114.25,
+ 114.51000000000001,
+ 115.41,
+ 115.53,
+ 116.45,
+ 119.45999999999999,
+ 119.47,
+ 120.68000000000001,
+ 127.59999999999999,
+ 127.87,
+ 128.59,
+ 129.47,
+ 129.65000000000001,
+ 130.27000000000001,
+ 131.08000000000001,
+ 132.86000000000001,
+ 132.87,
+ 136.87,
+ 137.03,
+ 137.25999999999999,
+ 137.41999999999999,
+ 138.5,
+ 138.58000000000001,
+ 139.03999999999999,
+ 139.58000000000001,
+ 139.63999999999999,
+ 139.65000000000001,
+ 139.86000000000001,
+ 139.86000000000001,
+ 139.94999999999999,
+ 139.99000000000001,
+ 140.0,
+ 140.88,
+ 141.11000000000001,
+ 141.13999999999999,
+ 141.15000000000001,
+ 141.22999999999999,
+ 141.22999999999999,
+ 141.65000000000001,
+ 141.84999999999999,
+ 141.86000000000001,
+ 141.88,
+ 142.41,
+ 142.68000000000001,
+ 142.69999999999999,
+ 142.86000000000001,
+ 142.97999999999999,
+ 143.00999999999999,
+ 143.21000000000001,
+ 143.41,
+ 143.49000000000001,
+ 143.74000000000001,
+ 143.78,
+ 143.81,
+ 143.86000000000001,
+ 144.08000000000001,
+ 144.08000000000001,
+ 144.50999999999999,
+ 144.71000000000001,
+ 144.72,
+ 145.30000000000001,
+ 145.31999999999999,
+ 145.34999999999999,
+ 145.47999999999999,
+ 145.47999999999999,
+ 145.62,
+ 145.63999999999999,
+ 145.66,
+ 145.75,
+ 145.90000000000001,
+ 146.03,
+ 146.21000000000001,
+ 146.33000000000001,
+ 146.41,
+ 146.53,
+ 146.59999999999999,
+ 146.93000000000001,
+ 147.28999999999999,
+ 147.55000000000001,
+ 147.62,
+ 147.71000000000001,
+ 147.78,
+ 147.90000000000001,
+ 147.91999999999999,
+ 147.97,
+ 148.31999999999999,
+ 148.41,
+ 148.47999999999999,
+ 148.5,
+ 148.56,
+ 148.56,
+ 148.56999999999999,
+ 148.72,
+ 148.86000000000001,
+ 149.28,
+ 149.34999999999999,
+ 149.40000000000001,
+ 149.44999999999999,
+ 149.62,
+ 149.69,
+ 149.91,
+ 149.94999999999999,
+ 149.96000000000001,
+ 150.03,
+ 150.28999999999999,
+ 150.33000000000001,
+ 150.33000000000001,
+ 150.44,
+ 150.84999999999999,
+ 150.90000000000001,
+ 151.05000000000001,
+ 151.16,
+ 151.31999999999999,
+ 151.34999999999999,
+ 151.38999999999999,
+ 151.40000000000001,
+ 151.44999999999999,
+ 151.49000000000001,
+ 151.74000000000001,
+ 151.90000000000001,
+ 152.34999999999999,
+ 152.66999999999999,
+ 152.83000000000001,
+ 152.84999999999999,
+ 152.90000000000001,
+ 153.09999999999999,
+ 153.66999999999999,
+ 153.80000000000001,
+ 153.93000000000001,
+ 154.13,
+ 154.19999999999999,
+ 154.25999999999999,
+ 154.66,
+ 154.72,
+ 154.80000000000001,
+ 154.84999999999999,
+ 154.93000000000001,
+ 154.97999999999999,
+ 155.16999999999999,
+ 155.18000000000001,
+ 155.19999999999999,
+ 155.34,
+ 155.53,
+ 155.56999999999999,
+ 155.68000000000001,
+ 155.78999999999999,
+ 155.84,
+ 155.88,
+ 156.19,
+ 156.22,
+ 156.34,
+ 156.81,
+ 156.81,
+ 156.97999999999999,
+ 157.0,
+ 157.38,
+ 157.46000000000001,
+ 157.52000000000001,
+ 157.72,
+ 158.06999999999999,
+ 158.80000000000001,
+ 159.18000000000001,
+ 159.22999999999999,
+ 159.30000000000001,
+ 159.69,
+ 160.5,
+ 160.84,
+ 161.59999999999999,
+ 161.77000000000001,
+ 162.05000000000001,
+ 162.19,
+ 162.43000000000001,
+ 162.47999999999999,
+ 162.58000000000001,
+ 163.41999999999999,
+ 163.86000000000001,
+ 164.33000000000001,
+ 164.58000000000001,
+ 164.81,
+ 164.86000000000001,
+ 164.91,
+ 165.40000000000001,
+ 165.44,
+ 165.56999999999999,
+ 165.83000000000001,
+ 166.38,
+ 166.86000000000001,
+ 167.5,
+ 168.36000000000001,
+ 168.41999999999999,
+ 168.58000000000001,
+ 168.83000000000001,
+ 168.88999999999999,
+ 169.09999999999999,
+ 169.22,
+ 169.41999999999999,
+ 169.47999999999999,
+ 169.72999999999999,
+ 169.78,
+ 169.78999999999999,
+ 169.94,
+ 170.05000000000001,
+ 170.11000000000001,
+ 170.65000000000001,
+ 170.77000000000001,
+ 170.94999999999999,
+ 171.02000000000001,
+ 171.15000000000001,
+ 171.16,
+ 171.16999999999999,
+ 171.33000000000001,
+ 171.33000000000001,
+ 171.49000000000001,
+ 171.49000000000001,
+ 171.86000000000001,
+ 172.08000000000001,
+ 172.55000000000001,
+ 172.68000000000001,
+ 172.83000000000001,
+ 173.05000000000001,
+ 173.06999999999999,
+ 173.28,
+ 173.41,
+ 173.68000000000001,
+ 173.86000000000001,
+ 173.91999999999999,
+ 174.13,
+ 174.15000000000001,
+ 174.16,
+ 175.40000000000001,
+ 175.97999999999999,
+ 176.33000000000001,
+ 176.34999999999999,
+ 176.38,
+ 176.47,
+ 176.68000000000001,
+ 176.75999999999999,
+ 176.87,
+ 177.53999999999999,
+ 177.66,
+ 178.66,
+ 178.81999999999999,
+ 178.84,
+ 178.91,
+ 179.08000000000001,
+ 179.15000000000001,
+ 179.21000000000001,
+ 179.5,
+ 179.66999999999999,
+ 180.81999999999999,
+ 181.06999999999999,
+ 181.12,
+ 181.13,
+ 181.16999999999999,
+ 181.19,
+ 181.34,
+ 182.03999999999999,
+ 182.22,
+ 182.56,
+ 182.72,
+ 183.05000000000001,
+ 183.11000000000001,
+ 183.28999999999999,
+ 183.43000000000001,
+ 183.78,
+ 183.87,
+ 183.94,
+ 184.06999999999999,
+ 184.19,
+ 184.19,
+ 184.27000000000001,
+ 184.36000000000001,
+ 184.53,
+ 184.66,
+ 184.71000000000001,
+ 184.81999999999999,
+ 185.28999999999999,
+ 185.31,
+ 185.41999999999999,
+ 185.44999999999999,
+ 185.46000000000001,
+ 185.72,
+ 185.78,
+ 185.88,
+ 186.06,
+ 186.08000000000001,
+ 186.44,
+ 186.53,
+ 186.68000000000001,
+ 186.74000000000001,
+ 186.88,
+ 186.91,
+ 187.03,
+ 187.06,
+ 187.50999999999999,
+ 187.56999999999999,
+ 187.59999999999999,
+ 187.91,
+ 188.03999999999999,
+ 188.28,
+ 188.41,
+ 188.46000000000001,
+ 188.50999999999999,
+ 188.74000000000001,
+ 188.78999999999999,
+ 188.84999999999999,
+ 188.87,
+ 188.90000000000001,
+ 188.96000000000001,
+ 189.06,
+ 189.08000000000001,
+ 189.11000000000001,
+ 189.19999999999999,
+ 189.28999999999999,
+ 189.38999999999999,
+ 189.46000000000001,
+ 189.47,
+ 189.5,
+ 189.53,
+ 189.56,
+ 189.65000000000001,
+ 189.88,
+ 190.18000000000001,
+ 190.28,
+ 190.28999999999999,
+ 190.31,
+ 190.31,
+ 190.31999999999999,
+ 190.43000000000001,
+ 190.47999999999999,
+ 190.53999999999999,
+ 190.58000000000001,
+ 190.59,
+ 191.00999999999999,
+ 191.12,
+ 191.30000000000001,
+ 191.49000000000001,
+ 191.66,
+ 191.74000000000001,
+ 191.84999999999999,
+ 191.99000000000001,
+ 192.0,
+ 192.15000000000001,
+ 192.36000000000001,
+ 192.56,
+ 192.71000000000001,
+ 192.78,
+ 192.78,
+ 193.06,
+ 193.06999999999999,
+ 193.09,
+ 193.11000000000001,
+ 193.25999999999999,
+ 193.31,
+ 193.37,
+ 193.38999999999999,
+ 193.56,
+ 193.66999999999999,
+ 193.87,
+ 193.88,
+ 194.03,
+ 194.18000000000001,
+ 194.49000000000001,
+ 194.55000000000001,
+ 194.58000000000001,
+ 194.66,
+ 194.75999999999999,
+ 194.80000000000001,
+ 194.80000000000001,
+ 194.80000000000001,
+ 194.86000000000001,
+ 194.99000000000001,
+ 195.0,
+ 195.02000000000001,
+ 195.05000000000001,
+ 195.15000000000001,
+ 195.25,
+ 195.30000000000001,
+ 195.34999999999999,
+ 195.53999999999999,
+ 195.75,
+ 195.91999999999999,
+ 196.19999999999999,
+ 196.44999999999999,
+ 196.55000000000001,
+ 196.65000000000001,
+ 196.88999999999999,
+ 196.94999999999999,
+ 197.18000000000001,
+ 197.19,
+ 197.19999999999999,
+ 197.28999999999999,
+ 197.31999999999999,
+ 197.78999999999999,
+ 197.81999999999999,
+ 198.05000000000001,
+ 198.11000000000001,
+ 198.12,
+ 198.22,
+ 198.28999999999999,
+ 198.30000000000001,
+ 198.38999999999999,
+ 198.88,
+ 199.24000000000001,
+ 199.25,
+ 199.30000000000001,
+ 199.31,
+ 199.53,
+ 199.78,
+ 199.90000000000001,
+ 200.06,
+ 200.52000000000001,
+ 200.69,
+ 200.75,
+ 200.78999999999999,
+ 200.86000000000001,
+ 200.88,
+ 200.96000000000001,
+ 201.03999999999999,
+ 201.25999999999999,
+ 201.28999999999999,
+ 201.28999999999999,
+ 201.31999999999999,
+ 201.52000000000001,
+ 201.53,
+ 201.55000000000001,
+ 201.56999999999999,
+ 201.59,
+ 201.69,
+ 201.69999999999999,
+ 201.78999999999999,
+ 201.78999999999999,
+ 201.81999999999999,
+ 201.91,
+ 201.91,
+ 201.91999999999999,
+ 201.97,
+ 201.97999999999999,
+ 202.06999999999999,
+ 202.22999999999999,
+ 202.25,
+ 202.58000000000001,
+ 202.63999999999999,
+ 202.72,
+ 202.84999999999999,
+ 202.88,
+ 203.08000000000001,
+ 203.21000000000001,
+ 203.22,
+ 203.22999999999999,
+ 203.46000000000001,
+ 203.47,
+ 203.74000000000001,
+ 203.78999999999999,
+ 203.78999999999999,
+ 204.03999999999999,
+ 204.19999999999999,
+ 204.21000000000001,
+ 204.27000000000001,
+ 204.40000000000001,
+ 204.44,
+ 204.47999999999999,
+ 204.59999999999999,
+ 204.63,
+ 204.74000000000001,
+ 204.99000000000001,
+ 204.99000000000001,
+ 205.03999999999999,
+ 205.12,
+ 205.38,
+ 205.65000000000001,
+ 205.69999999999999,
+ 206.09999999999999,
+ 206.59999999999999,
+ 206.81999999999999,
+ 206.84,
+ 206.87,
+ 206.99000000000001,
+ 207.03999999999999,
+ 207.13999999999999,
+ 207.22,
+ 207.28999999999999,
+ 207.37,
+ 207.63999999999999,
+ 207.68000000000001,
+ 207.78999999999999,
+ 207.97999999999999,
+ 208.03,
+ 208.18000000000001,
+ 208.41,
+ 208.41999999999999,
+ 208.53999999999999,
+ 208.63999999999999,
+ 208.69999999999999,
+ 208.75999999999999,
+ 208.88999999999999,
+ 209.12,
+ 209.27000000000001,
+ 209.28999999999999,
+ 209.44,
+ 209.46000000000001,
+ 209.72999999999999,
+ 209.75999999999999,
+ 209.80000000000001,
+ 209.83000000000001,
+ 209.86000000000001,
+ 210.00999999999999,
+ 210.03999999999999,
+ 210.11000000000001,
+ 210.52000000000001,
+ 210.58000000000001,
+ 210.66,
+ 211.05000000000001,
+ 211.22,
+ 211.38,
+ 211.38999999999999,
+ 211.53,
+ 211.86000000000001,
+ 211.94,
+ 212.06999999999999,
+ 212.09,
+ 212.11000000000001,
+ 212.13,
+ 212.21000000000001,
+ 212.44999999999999,
+ 212.77000000000001,
+ 212.81999999999999,
+ 212.94999999999999,
+ 213.03999999999999,
+ 213.06999999999999,
+ 213.11000000000001,
+ 213.13,
+ 213.19999999999999,
+ 213.37,
+ 213.44,
+ 213.50999999999999,
+ 213.53999999999999,
+ 213.63,
+ 213.74000000000001,
+ 213.99000000000001,
+ 214.09999999999999,
+ 214.28999999999999,
+ 214.28999999999999,
+ 214.41999999999999,
+ 214.66,
+ 214.84999999999999,
+ 214.86000000000001,
+ 214.87,
+ 214.91,
+ 215.25,
+ 215.30000000000001,
+ 215.61000000000001,
+ 215.78,
+ 215.80000000000001,
+ 216.08000000000001,
+ 216.11000000000001,
+ 216.13,
+ 216.28,
+ 216.46000000000001,
+ 216.53,
+ 216.56,
+ 216.66,
+ 216.71000000000001,
+ 216.91999999999999,
+ 217.34,
+ 217.40000000000001,
+ 217.59,
+ 217.81999999999999,
+ 217.90000000000001,
+ 218.0,
+ 218.06,
+ 218.33000000000001,
+ 218.44999999999999,
+ 218.61000000000001,
+ 218.74000000000001,
+ 218.81999999999999,
+ 218.87,
+ 219.12,
+ 219.16999999999999,
+ 219.31999999999999,
+ 219.36000000000001,
+ 219.53,
+ 219.58000000000001,
+ 219.69999999999999,
+ 219.71000000000001,
+ 219.87,
+ 219.91999999999999,
+ 220.00999999999999,
+ 220.03,
+ 220.19999999999999,
+ 220.25,
+ 221.08000000000001,
+ 221.24000000000001,
+ 221.28,
+ 221.28999999999999,
+ 221.28999999999999,
+ 221.30000000000001,
+ 221.75999999999999,
+ 221.81999999999999,
+ 221.90000000000001,
+ 221.94,
+ 222.08000000000001,
+ 222.18000000000001,
+ 222.22,
+ 222.22999999999999,
+ 222.25,
+ 222.40000000000001,
+ 222.41999999999999,
+ 222.41999999999999,
+ 222.59999999999999,
+ 222.87,
+ 223.13999999999999,
+ 223.19999999999999,
+ 223.38999999999999,
+ 223.63,
+ 223.78,
+ 223.88999999999999,
+ 224.16,
+ 224.34999999999999,
+ 224.5,
+ 224.55000000000001,
+ 224.78,
+ 224.87,
+ 224.90000000000001,
+ 224.94999999999999,
+ 225.16,
+ 225.25999999999999,
+ 225.34,
+ 225.38999999999999,
+ 225.47,
+ 225.59999999999999,
+ 225.88,
+ 226.12,
+ 226.25,
+ 226.28,
+ 226.63999999999999,
+ 226.74000000000001,
+ 226.90000000000001,
+ 227.08000000000001,
+ 227.13,
+ 227.15000000000001,
+ 227.28999999999999,
+ 227.33000000000001,
+ 227.56,
+ 227.59,
+ 227.65000000000001,
+ 227.87,
+ 228.05000000000001,
+ 228.05000000000001,
+ 228.08000000000001,
+ 228.28,
+ 228.31999999999999,
+ 228.5,
+ 228.53,
+ 228.53999999999999,
+ 228.55000000000001,
+ 228.77000000000001,
+ 228.84999999999999,
+ 228.87,
+ 228.91999999999999,
+ 229.03999999999999,
+ 229.06,
+ 229.08000000000001,
+ 229.19,
+ 229.31999999999999,
+ 229.56999999999999,
+ 229.61000000000001,
+ 229.77000000000001,
+ 229.94,
+ 229.97,
+ 230.00999999999999,
+ 230.05000000000001,
+ 230.22999999999999,
+ 230.41999999999999,
+ 230.5,
+ 230.5,
+ 230.59999999999999,
+ 230.66,
+ 230.68000000000001,
+ 230.71000000000001,
+ 230.71000000000001,
+ 230.78,
+ 230.78999999999999,
+ 230.91,
+ 231.05000000000001,
+ 231.16999999999999,
+ 231.22,
+ 231.27000000000001,
+ 231.36000000000001,
+ 231.41,
+ 231.58000000000001,
+ 231.58000000000001,
+ 231.75,
+ 231.80000000000001,
+ 231.86000000000001,
+ 231.86000000000001,
+ 231.97,
+ 231.97,
+ 232.03,
+ 232.13999999999999,
+ 232.22999999999999,
+ 232.27000000000001,
+ 232.38999999999999,
+ 232.38999999999999,
+ 232.59999999999999,
+ 232.62,
+ 232.62,
+ 232.66,
+ 232.72999999999999,
+ 232.80000000000001,
+ 232.86000000000001,
+ 232.88999999999999,
+ 232.91,
+ 233.02000000000001,
+ 233.13999999999999,
+ 233.16999999999999,
+ 233.22,
+ 233.31999999999999,
+ 233.34999999999999,
+ 233.40000000000001,
+ 233.46000000000001,
+ 233.50999999999999,
+ 233.52000000000001,
+ 233.56,
+ 233.66999999999999,
+ 233.69999999999999,
+ 233.75,
+ 233.77000000000001,
+ 233.78,
+ 233.87,
+ 234.06,
+ 234.08000000000001,
+ 234.13,
+ 234.16999999999999,
+ 234.27000000000001,
+ 234.30000000000001,
+ 234.38999999999999,
+ 234.65000000000001,
+ 234.72,
+ 234.74000000000001,
+ 234.77000000000001,
+ 234.91,
+ 234.91999999999999,
+ 235.05000000000001,
+ 235.06,
+ 235.06999999999999,
+ 235.22999999999999,
+ 235.24000000000001,
+ 235.27000000000001,
+ 235.28,
+ 235.31,
+ 235.31999999999999,
+ 235.34999999999999,
+ 235.44999999999999,
+ 235.44999999999999,
+ 235.5,
+ 235.52000000000001,
+ 235.58000000000001,
+ 235.59,
+ 235.66,
+ 235.78999999999999,
+ 235.80000000000001,
+ 235.81,
+ 235.83000000000001,
+ 236.05000000000001,
+ 236.06,
+ 236.06999999999999,
+ 236.08000000000001,
+ 236.09999999999999,
+ 236.16,
+ 236.19,
+ 236.38,
+ 236.41999999999999,
+ 236.53999999999999,
+ 236.63999999999999,
+ 236.65000000000001,
+ 236.75,
+ 236.77000000000001,
+ 236.84,
+ 236.90000000000001,
+ 236.93000000000001,
+ 237.19999999999999,
+ 237.25999999999999,
+ 237.27000000000001,
+ 237.31,
+ 237.31999999999999,
+ 237.36000000000001,
+ 237.46000000000001,
+ 237.5,
+ 237.56999999999999,
+ 237.68000000000001,
+ 237.69,
+ 237.69,
+ 237.69,
+ 237.77000000000001,
+ 237.83000000000001,
+ 237.84999999999999,
+ 237.96000000000001,
+ 238.05000000000001,
+ 238.16999999999999,
+ 238.24000000000001,
+ 238.30000000000001,
+ 238.31999999999999,
+ 238.31999999999999,
+ 238.34,
+ 238.50999999999999,
+ 238.53,
+ 238.53,
+ 238.75999999999999,
+ 239.25999999999999,
+ 239.27000000000001,
+ 239.28999999999999,
+ 239.30000000000001,
+ 239.31999999999999,
+ 239.69,
+ 239.87,
+ 239.91,
+ ...]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">pokemon</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[61]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;Bulbasaur&#39;,
+ &#39;Ivysaur&#39;,
+ &#39;Venusaur&#39;,
+ &#39;Charmander&#39;,
+ &#39;Charmeleon&#39;,
+ &#39;Charizard&#39;,
+ &#39;Squirtle&#39;,
+ &#39;Wartortle&#39;,
+ &#39;Blastoise&#39;,
+ &#39;Caterpie&#39;,
+ &#39;Metapod&#39;,
+ &#39;Butterfree&#39;,
+ &#39;Weedle&#39;,
+ &#39;Kakuna&#39;,
+ &#39;Beedrill&#39;,
+ &#39;Pidgey&#39;,
+ &#39;Pidgeotto&#39;,
+ &#39;Pidgeot&#39;,
+ &#39;Rattata&#39;,
+ &#39;Raticate&#39;,
+ &#39;Spearow&#39;,
+ &#39;Fearow&#39;,
+ &#39;Ekans&#39;,
+ &#39;Arbok&#39;,
+ &#39;Pikachu&#39;,
+ &#39;Raichu&#39;,
+ &#39;Sandshrew&#39;,
+ &#39;Sandslash&#39;,
+ &#39;Nidoran&#39;,
+ &#39;Nidorina&#39;,
+ &#39;Nidoqueen&#39;,
+ &#39;Nidoran♂&#39;,
+ &#39;Nidorino&#39;,
+ &#39;Nidoking&#39;,
+ &#39;Clefairy&#39;,
+ &#39;Clefable&#39;,
+ &#39;Vulpix&#39;,
+ &#39;Ninetales&#39;,
+ &#39;Jigglypuff&#39;,
+ &#39;Wigglytuff&#39;,
+ &#39;Zubat&#39;,
+ &#39;Golbat&#39;,
+ &#39;Oddish&#39;,
+ &#39;Gloom&#39;,
+ &#39;Vileplume&#39;,
+ &#39;Paras&#39;,
+ &#39;Parasect&#39;,
+ &#39;Venonat&#39;,
+ &#39;Venomoth&#39;,
+ &#39;Diglett&#39;,
+ &#39;Dugtrio&#39;,
+ &#39;Meowth&#39;,
+ &#39;Persian&#39;,
+ &#39;Psyduck&#39;,
+ &#39;Golduck&#39;,
+ &#39;Mankey&#39;,
+ &#39;Primeape&#39;,
+ &#39;Growlithe&#39;,
+ &#39;Arcanine&#39;,
+ &#39;Poliwag&#39;,
+ &#39;Poliwhirl&#39;,
+ &#39;Poliwrath&#39;,
+ &#39;Abra&#39;,
+ &#39;Kadabra&#39;,
+ &#39;Alakazam&#39;,
+ &#39;Machop&#39;,
+ &#39;Machoke&#39;,
+ &#39;Machamp&#39;,
+ &#39;Bellsprout&#39;,
+ &#39;Weepinbell&#39;,
+ &#39;Victreebel&#39;,
+ &#39;Tentacool&#39;,
+ &#39;Tentacruel&#39;,
+ &#39;Geodude&#39;,
+ &#39;Graveler&#39;,
+ &#39;Golem&#39;,
+ &#39;Ponyta&#39;,
+ &#39;Rapidash&#39;,
+ &#39;Slowpoke&#39;,
+ &#39;Slowbro&#39;,
+ &#39;Magnemite&#39;,
+ &#39;Magneton&#39;,
+ &#34;Farfetch&#39;d&#34;,
+ &#39;Doduo&#39;,
+ &#39;Dodrio&#39;,
+ &#39;Seel&#39;,
+ &#39;Dewgong&#39;,
+ &#39;Grimer&#39;,
+ &#39;Muk&#39;,
+ &#39;Shellder&#39;,
+ &#39;Cloyster&#39;,
+ &#39;Gastly&#39;,
+ &#39;Haunter&#39;,
+ &#39;Gengar&#39;,
+ &#39;Onix&#39;,
+ &#39;Drowzee&#39;,
+ &#39;Hypno&#39;,
+ &#39;Krabby&#39;,
+ &#39;Kingler&#39;,
+ &#39;Voltorb&#39;,
+ &#39;Electrode&#39;,
+ &#39;Exeggcute&#39;,
+ &#39;Exeggutor&#39;,
+ &#39;Cubone&#39;,
+ &#39;Marowak&#39;,
+ &#39;Hitmonlee&#39;,
+ &#39;Hitmonchan&#39;,
+ &#39;Lickitung&#39;,
+ &#39;Koffing&#39;,
+ &#39;Weezing&#39;,
+ &#39;Rhyhorn&#39;,
+ &#39;Rhydon&#39;,
+ &#39;Chansey&#39;,
+ &#39;Tangela&#39;,
+ &#39;Kangaskhan&#39;,
+ &#39;Horsea&#39;,
+ &#39;Seadra&#39;,
+ &#39;Goldeen&#39;,
+ &#39;Seaking&#39;,
+ &#39;Staryu&#39;,
+ &#39;Starmie&#39;,
+ &#39;Mr. Mime&#39;,
+ &#39;Scyther&#39;,
+ &#39;Jynx&#39;,
+ &#39;Electabuzz&#39;,
+ &#39;Magmar&#39;,
+ &#39;Pinsir&#39;,
+ &#39;Tauros&#39;,
+ &#39;Magikarp&#39;,
+ &#39;Gyarados&#39;,
+ &#39;Lapras&#39;,
+ &#39;Ditto&#39;,
+ &#39;Eevee&#39;,
+ &#39;Vaporeon&#39;,
+ &#39;Jolteon&#39;,
+ &#39;Flareon&#39;,
+ &#39;Porygon&#39;,
+ &#39;Omanyte&#39;,
+ &#39;Omastar&#39;,
+ &#39;Kabuto&#39;,
+ &#39;Kabutops&#39;,
+ &#39;Aerodactyl&#39;,
+ &#39;Snorlax&#39;,
+ &#39;Articuno&#39;,
+ &#39;Zapdos&#39;,
+ &#39;Moltres&#39;,
+ &#39;Dratini&#39;,
+ &#39;Dragonair&#39;,
+ &#39;Dragonite&#39;,
+ &#39;Mewtwo&#39;,
+ &#39;Mew&#39;,
+ &#39;Chikorita&#39;,
+ &#39;Bayleef&#39;,
+ &#39;Meganium&#39;,
+ &#39;Cyndaquil&#39;,
+ &#39;Quilava&#39;,
+ &#39;Typhlosion&#39;,
+ &#39;Totodile&#39;,
+ &#39;Croconaw&#39;,
+ &#39;Feraligatr&#39;,
+ &#39;Sentret&#39;,
+ &#39;Furret&#39;,
+ &#39;Hoothoot&#39;,
+ &#39;Noctowl&#39;,
+ &#39;Ledyba&#39;,
+ &#39;Ledian&#39;,
+ &#39;Spinarak&#39;,
+ &#39;Ariados&#39;,
+ &#39;Crobat&#39;,
+ &#39;Chinchou&#39;,
+ &#39;Lanturn&#39;,
+ &#39;Pichu&#39;,
+ &#39;Cleffa&#39;,
+ &#39;Igglybuff&#39;,
+ &#39;Togepi&#39;,
+ &#39;Togetic&#39;,
+ &#39;Natu&#39;,
+ &#39;Xatu&#39;,
+ &#39;Mareep&#39;,
+ &#39;Flaaffy&#39;,
+ &#39;Ampharos&#39;,
+ &#39;Bellossom&#39;,
+ &#39;Marill&#39;,
+ &#39;Azumarill&#39;,
+ &#39;Sudowoodo&#39;,
+ &#39;Politoed&#39;,
+ &#39;Hoppip&#39;,
+ &#39;Skiploom&#39;,
+ &#39;Jumpluff&#39;,
+ &#39;Aipom&#39;,
+ &#39;Sunkern&#39;,
+ &#39;Sunflora&#39;,
+ &#39;Yanma&#39;,
+ &#39;Wooper&#39;,
+ &#39;Quagsire&#39;,
+ &#39;Espeon&#39;,
+ &#39;Umbreon&#39;,
+ &#39;Murkrow&#39;,
+ &#39;Slowking&#39;,
+ &#39;Misdreavus&#39;,
+ &#39;Unown&#39;,
+ &#39;Wobbuffet&#39;,
+ &#39;Girafarig&#39;,
+ &#39;Pineco&#39;,
+ &#39;Forretress&#39;,
+ &#39;Dunsparce&#39;,
+ &#39;Gligar&#39;,
+ &#39;Steelix&#39;,
+ &#39;Snubbull&#39;,
+ &#39;Granbull&#39;,
+ &#39;Qwilfish&#39;,
+ &#39;Scizor&#39;,
+ &#39;Shuckle&#39;,
+ &#39;Heracross&#39;,
+ &#39;Sneasel&#39;,
+ &#39;Teddiursa&#39;,
+ &#39;Ursaring&#39;,
+ &#39;Slugma&#39;,
+ &#39;Magcargo&#39;,
+ &#39;Swinub&#39;,
+ &#39;Piloswine&#39;,
+ &#39;Corsola&#39;,
+ &#39;Remoraid&#39;,
+ &#39;Octillery&#39;,
+ &#39;Delibird&#39;,
+ &#39;Mantine&#39;,
+ &#39;Skarmory&#39;,
+ &#39;Houndour&#39;,
+ &#39;Houndoom&#39;,
+ &#39;Kingdra&#39;,
+ &#39;Phanpy&#39;,
+ &#39;Donphan&#39;,
+ &#39;Porygon2&#39;,
+ &#39;Stantler&#39;,
+ &#39;Smeargle&#39;,
+ &#39;Tyrogue&#39;,
+ &#39;Hitmontop&#39;,
+ &#39;Smoochum&#39;,
+ &#39;Elekid&#39;,
+ &#39;Magby&#39;,
+ &#39;Miltank&#39;,
+ &#39;Blissey&#39;,
+ &#39;Raikou&#39;,
+ &#39;Entei&#39;,
+ &#39;Suicune&#39;,
+ &#39;Larvitar&#39;,
+ &#39;Pupitar&#39;,
+ &#39;Tyranitar&#39;,
+ &#39;Lugia&#39;,
+ &#39;Ho-oh&#39;,
+ &#39;Celebi&#39;,
+ &#39;Treecko&#39;,
+ &#39;Grovyle&#39;,
+ &#39;Sceptile&#39;,
+ &#39;Torchic&#39;,
+ &#39;Combusken&#39;,
+ &#39;Blaziken&#39;,
+ &#39;Mudkip&#39;,
+ &#39;Marshtomp&#39;,
+ &#39;Swampert&#39;,
+ &#39;Poochyena&#39;,
+ &#39;Mightyena&#39;,
+ &#39;Zigzagoon&#39;,
+ &#39;Linoone&#39;,
+ &#39;Wurmple&#39;,
+ &#39;Silcoon&#39;,
+ &#39;Beautifly&#39;,
+ &#39;Cascoon&#39;,
+ &#39;Dustox&#39;,
+ &#39;Lotad&#39;,
+ &#39;Lombre&#39;,
+ &#39;Ludicolo&#39;,
+ &#39;Seedot&#39;,
+ &#39;Nuzleaf&#39;,
+ &#39;Shiftry&#39;,
+ &#39;Taillow&#39;,
+ &#39;Swellow&#39;,
+ &#39;Wingull&#39;,
+ &#39;Pelipper&#39;,
+ &#39;Ralts&#39;,
+ &#39;Kirlia&#39;,
+ &#39;Gardevoir&#39;,
+ &#39;Surskit&#39;,
+ &#39;Masquerain&#39;,
+ &#39;Shroomish&#39;,
+ &#39;Breloom&#39;,
+ &#39;Slakoth&#39;,
+ &#39;Vigoroth&#39;,
+ &#39;Slaking&#39;,
+ &#39;Nincada&#39;,
+ &#39;Ninjask&#39;,
+ &#39;Shedinja&#39;,
+ &#39;Whismur&#39;,
+ &#39;Loudred&#39;,
+ &#39;Exploud&#39;,
+ &#39;Makuhita&#39;,
+ &#39;Hariyama&#39;,
+ &#39;Azurill&#39;,
+ &#39;Nosepass&#39;,
+ &#39;Skitty&#39;,
+ &#39;Delcatty&#39;,
+ &#39;Sableye&#39;,
+ &#39;Mawile&#39;,
+ &#39;Aron&#39;,
+ &#39;Lairon&#39;,
+ &#39;Aggron&#39;,
+ &#39;Meditite&#39;,
+ &#39;Medicham&#39;,
+ &#39;Electrike&#39;,
+ &#39;Manectric&#39;,
+ &#39;Plusle&#39;,
+ &#39;Minun&#39;,
+ &#39;Volbeat&#39;,
+ &#39;Illumise&#39;,
+ &#39;Roselia&#39;,
+ &#39;Gulpin&#39;,
+ &#39;Swalot&#39;,
+ &#39;Carvanha&#39;,
+ &#39;Sharpedo&#39;,
+ &#39;Wailmer&#39;,
+ &#39;Wailord&#39;,
+ &#39;Numel&#39;,
+ &#39;Camerupt&#39;,
+ &#39;Torkoal&#39;,
+ &#39;Spoink&#39;,
+ &#39;Grumpig&#39;,
+ &#39;Spinda&#39;,
+ &#39;Trapinch&#39;,
+ &#39;Vibrava&#39;,
+ &#39;Flygon&#39;,
+ &#39;Cacnea&#39;,
+ &#39;Cacturne&#39;,
+ &#39;Swablu&#39;,
+ &#39;Altaria&#39;,
+ &#39;Zangoose&#39;,
+ &#39;Seviper&#39;,
+ &#39;Lunatone&#39;,
+ &#39;Solrock&#39;,
+ &#39;Barboach&#39;,
+ &#39;Whiscash&#39;,
+ &#39;Corphish&#39;,
+ &#39;Crawdaunt&#39;,
+ &#39;Baltoy&#39;,
+ &#39;Claydol&#39;,
+ &#39;Lileep&#39;,
+ &#39;Cradily&#39;,
+ &#39;Anorith&#39;,
+ &#39;Armaldo&#39;,
+ &#39;Feebas&#39;,
+ &#39;Milotic&#39;,
+ &#39;Castform&#39;,
+ &#39;Kecleon&#39;,
+ &#39;Shuppet&#39;,
+ &#39;Banette&#39;,
+ &#39;Duskull&#39;,
+ &#39;Dusclops&#39;,
+ &#39;Tropius&#39;,
+ &#39;Chimecho&#39;,
+ &#39;Absol&#39;,
+ &#39;Wynaut&#39;,
+ &#39;Snorunt&#39;,
+ &#39;Glalie&#39;,
+ &#39;Spheal&#39;,
+ &#39;Sealeo&#39;,
+ &#39;Walrein&#39;,
+ &#39;Clamperl&#39;,
+ &#39;Huntail&#39;,
+ &#39;Gorebyss&#39;,
+ &#39;Relicanth&#39;,
+ &#39;Luvdisc&#39;,
+ &#39;Bagon&#39;,
+ &#39;Shelgon&#39;,
+ &#39;Salamence&#39;,
+ &#39;Beldum&#39;,
+ &#39;Metang&#39;,
+ &#39;Metagross&#39;,
+ &#39;Regirock&#39;,
+ &#39;Regice&#39;,
+ &#39;Registeel&#39;,
+ &#39;Latias&#39;,
+ &#39;Latios&#39;,
+ &#39;Kyogre&#39;,
+ &#39;Groudon&#39;,
+ &#39;Rayquaza&#39;,
+ &#39;Jirachi&#39;,
+ &#39;Deoxys&#39;,
+ &#39;Turtwig&#39;,
+ &#39;Grotle&#39;,
+ &#39;Torterra&#39;,
+ &#39;Chimchar&#39;,
+ &#39;Monferno&#39;,
+ &#39;Infernape&#39;,
+ &#39;Piplup&#39;,
+ &#39;Prinplup&#39;,
+ &#39;Empoleon&#39;,
+ &#39;Starly&#39;,
+ &#39;Staravia&#39;,
+ &#39;Staraptor&#39;,
+ &#39;Bidoof&#39;,
+ &#39;Bibarel&#39;,
+ &#39;Kricketot&#39;,
+ &#39;Kricketune&#39;,
+ &#39;Shinx&#39;,
+ &#39;Luxio&#39;,
+ &#39;Luxray&#39;,
+ &#39;Budew&#39;,
+ &#39;Roserade&#39;,
+ &#39;Cranidos&#39;,
+ &#39;Rampardos&#39;,
+ &#39;Shieldon&#39;,
+ &#39;Bastiodon&#39;,
+ &#39;Burmy&#39;,
+ &#39;Wormadam&#39;,
+ &#39;Mothim&#39;,
+ &#39;Combee&#39;,
+ &#39;Vespiquen&#39;,
+ &#39;Pachirisu&#39;,
+ &#39;Buizel&#39;,
+ &#39;Floatzel&#39;,
+ &#39;Cherubi&#39;,
+ &#39;Cherrim&#39;,
+ &#39;Shellos&#39;,
+ &#39;Gastrodon&#39;,
+ &#39;Ambipom&#39;,
+ &#39;Drifloon&#39;,
+ &#39;Drifblim&#39;,
+ &#39;Buneary&#39;,
+ &#39;Lopunny&#39;,
+ &#39;Mismagius&#39;,
+ &#39;Honchkrow&#39;,
+ &#39;Glameow&#39;,
+ &#39;Purugly&#39;,
+ &#39;Chingling&#39;,
+ &#39;Stunky&#39;,
+ &#39;Skuntank&#39;,
+ &#39;Bronzor&#39;,
+ &#39;Bronzong&#39;,
+ &#39;Bonsly&#39;,
+ &#39;Mime Jr.&#39;,
+ &#39;Happiny&#39;,
+ &#39;Chatot&#39;,
+ &#39;Spiritomb&#39;,
+ &#39;Gible&#39;,
+ &#39;Gabite&#39;,
+ &#39;Garchomp&#39;,
+ &#39;Munchlax&#39;,
+ &#39;Riolu&#39;,
+ &#39;Lucario&#39;,
+ &#39;Hippopotas&#39;,
+ &#39;Hippowdon&#39;,
+ &#39;Skorupi&#39;,
+ &#39;Drapion&#39;,
+ &#39;Croagunk&#39;,
+ &#39;Toxicroak&#39;,
+ &#39;Carnivine&#39;,
+ &#39;Finneon&#39;,
+ &#39;Lumineon&#39;,
+ &#39;Mantyke&#39;,
+ &#39;Snover&#39;,
+ &#39;Abomasnow&#39;,
+ &#39;Weavile&#39;,
+ &#39;Magnezone&#39;,
+ &#39;Lickilicky&#39;,
+ &#39;Rhyperior&#39;,
+ &#39;Tangrowth&#39;,
+ &#39;Electivire&#39;,
+ &#39;Magmortar&#39;,
+ &#39;Togekiss&#39;,
+ &#39;Yanmega&#39;,
+ &#39;Leafeon&#39;,
+ &#39;Glaceon&#39;,
+ &#39;Gliscor&#39;,
+ &#39;Mamoswine&#39;,
+ &#39;Porygon-Z&#39;,
+ &#39;Gallade&#39;,
+ &#39;Probopass&#39;,
+ &#39;Dusknoir&#39;,
+ &#39;Froslass&#39;,
+ &#39;Rotom&#39;,
+ &#39;Uxie&#39;,
+ &#39;Mesprit&#39;,
+ &#39;Azelf&#39;,
+ &#39;Dialga&#39;,
+ &#39;Palkia&#39;,
+ &#39;Heatran&#39;,
+ &#39;Regigigas&#39;,
+ &#39;Giratina&#39;,
+ &#39;Cresselia&#39;,
+ &#39;Phione&#39;,
+ &#39;Manaphy&#39;,
+ &#39;Darkrai&#39;,
+ &#39;Shaymin&#39;,
+ &#39;Arceus&#39;,
+ &#39;Victini&#39;,
+ &#39;Snivy&#39;,
+ &#39;Servine&#39;,
+ &#39;Serperior&#39;,
+ &#39;Tepig&#39;,
+ &#39;Pignite&#39;,
+ &#39;Emboar&#39;,
+ &#39;Oshawott&#39;,
+ &#39;Dewott&#39;,
+ &#39;Samurott&#39;,
+ &#39;Patrat&#39;,
+ &#39;Watchog&#39;,
+ &#39;Lillipup&#39;,
+ &#39;Herdier&#39;,
+ &#39;Stoutland&#39;,
+ &#39;Purrloin&#39;,
+ &#39;Liepard&#39;,
+ &#39;Pansage&#39;,
+ &#39;Simisage&#39;,
+ &#39;Pansear&#39;,
+ &#39;Simisear&#39;,
+ &#39;Panpour&#39;,
+ &#39;Simipour&#39;,
+ &#39;Munna&#39;,
+ &#39;Musharna&#39;,
+ &#39;Pidove&#39;,
+ &#39;Tranquill&#39;,
+ &#39;Unfezant&#39;,
+ &#39;Blitzle&#39;,
+ &#39;Zebstrika&#39;,
+ &#39;Roggenrola&#39;,
+ &#39;Boldore&#39;,
+ &#39;Gigalith&#39;,
+ &#39;Woobat&#39;,
+ &#39;Swoobat&#39;,
+ &#39;Drilbur&#39;,
+ &#39;Excadrill&#39;,
+ &#39;Audino&#39;,
+ &#39;Timburr&#39;,
+ &#39;Gurdurr&#39;,
+ &#39;Conkeldurr&#39;,
+ &#39;Tympole&#39;,
+ &#39;Palpitoad&#39;,
+ &#39;Seismitoad&#39;,
+ &#39;Throh&#39;,
+ &#39;Sawk&#39;,
+ &#39;Sewaddle&#39;,
+ &#39;Swadloon&#39;,
+ &#39;Leavanny&#39;,
+ &#39;Venipede&#39;,
+ &#39;Whirlipede&#39;,
+ &#39;Scolipede&#39;,
+ &#39;Cottonee&#39;,
+ &#39;Whimsicott&#39;,
+ &#39;Petilil&#39;,
+ &#39;Lilligant&#39;,
+ &#39;Basculin&#39;,
+ &#39;Sandile&#39;,
+ &#39;Krokorok&#39;,
+ &#39;Krookodile&#39;,
+ &#39;Darumaka&#39;,
+ &#39;Darmanitan&#39;,
+ &#39;Maractus&#39;,
+ &#39;Dwebble&#39;,
+ &#39;Crustle&#39;,
+ &#39;Scraggy&#39;,
+ &#39;Scrafty&#39;,
+ &#39;Sigilyph&#39;,
+ &#39;Yamask&#39;,
+ &#39;Cofagrigus&#39;,
+ &#39;Tirtouga&#39;,
+ &#39;Carracosta&#39;,
+ &#39;Archen&#39;,
+ &#39;Archeops&#39;,
+ &#39;Trubbish&#39;,
+ &#39;Garbodor&#39;,
+ &#39;Zorua&#39;,
+ &#39;Zoroark&#39;,
+ &#39;Minccino&#39;,
+ &#39;Cinccino&#39;,
+ &#39;Gothita&#39;,
+ &#39;Gothorita&#39;,
+ &#39;Gothitelle&#39;,
+ &#39;Solosis&#39;,
+ &#39;Duosion&#39;,
+ &#39;Reuniclus&#39;,
+ &#39;Ducklett&#39;,
+ &#39;Swanna&#39;,
+ &#39;Vanillite&#39;,
+ &#39;Vanillish&#39;,
+ &#39;Vanilluxe&#39;,
+ &#39;Deerling&#39;,
+ &#39;Sawsbuck&#39;,
+ &#39;Emolga&#39;,
+ &#39;Karrablast&#39;,
+ &#39;Escavalier&#39;,
+ &#39;Foongus&#39;,
+ &#39;Amoonguss&#39;,
+ &#39;Frillish&#39;,
+ &#39;Jellicent&#39;,
+ &#39;Alomomola&#39;,
+ &#39;Joltik&#39;,
+ &#39;Galvantula&#39;,
+ &#39;Ferroseed&#39;,
+ &#39;Ferrothorn&#39;,
+ &#39;Klink&#39;,
+ &#39;Klang&#39;,
+ &#39;Klinklang&#39;,
+ &#39;Tynamo&#39;,
+ &#39;Eelektrik&#39;,
+ &#39;Eelektross&#39;,
+ &#39;Elgyem&#39;,
+ &#39;Beheeyem&#39;,
+ &#39;Litwick&#39;,
+ &#39;Lampent&#39;,
+ &#39;Chandelure&#39;,
+ &#39;Axew&#39;,
+ &#39;Fraxure&#39;,
+ &#39;Haxorus&#39;,
+ &#39;Cubchoo&#39;,
+ &#39;Beartic&#39;,
+ &#39;Cryogonal&#39;,
+ &#39;Shelmet&#39;,
+ &#39;Accelgor&#39;,
+ &#39;Stunfisk&#39;,
+ &#39;Mienfoo&#39;,
+ &#39;Mienshao&#39;,
+ &#39;Druddigon&#39;,
+ &#39;Golett&#39;,
+ &#39;Golurk&#39;,
+ &#39;Pawniard&#39;,
+ &#39;Bisharp&#39;,
+ &#39;Bouffalant&#39;,
+ &#39;Rufflet&#39;,
+ &#39;Braviary&#39;,
+ &#39;Vullaby&#39;,
+ &#39;Mandibuzz&#39;,
+ &#39;Heatmor&#39;,
+ &#39;Durant&#39;,
+ &#39;Deino&#39;,
+ &#39;Zweilous&#39;,
+ &#39;Hydreigon&#39;,
+ &#39;Larvesta&#39;,
+ &#39;Volcarona&#39;,
+ &#39;Cobalion&#39;,
+ &#39;Terrakion&#39;,
+ &#39;Virizion&#39;,
+ &#39;Tornadus&#39;,
+ &#39;Thundurus&#39;,
+ &#39;Reshiram&#39;,
+ &#39;Zekrom&#39;,
+ &#39;Landorus&#39;,
+ &#39;Kyurem&#39;,
+ &#39;Keldeo&#39;,
+ &#39;Meloetta&#39;,
+ &#39;Genesect&#39;,
+ &#39;Chespin&#39;,
+ &#39;Quilladin&#39;,
+ &#39;Chesnaught&#39;,
+ &#39;Fennekin&#39;,
+ &#39;Braixen&#39;,
+ &#39;Delphox&#39;,
+ &#39;Froakie&#39;,
+ &#39;Frogadier&#39;,
+ &#39;Greninja&#39;,
+ &#39;Bunnelby&#39;,
+ &#39;Diggersby&#39;,
+ &#39;Fletchling&#39;,
+ &#39;Fletchinder&#39;,
+ &#39;Talonflame&#39;,
+ &#39;Scatterbug&#39;,
+ &#39;Spewpa&#39;,
+ &#39;Vivillon&#39;,
+ &#39;Litleo&#39;,
+ &#39;Pyroar&#39;,
+ &#39;Flabébé&#39;,
+ &#39;Floette&#39;,
+ &#39;Florges&#39;,
+ &#39;Skiddo&#39;,
+ &#39;Gogoat&#39;,
+ &#39;Pancham&#39;,
+ &#39;Pangoro&#39;,
+ &#39;Furfrou&#39;,
+ &#39;Espurr&#39;,
+ &#39;Meowstic&#39;,
+ &#39;Honedge&#39;,
+ &#39;Doublade&#39;,
+ &#39;Aegislash&#39;,
+ &#39;Spritzee&#39;,
+ &#39;Aromatisse&#39;,
+ &#39;Swirlix&#39;,
+ &#39;Slurpuff&#39;,
+ &#39;Inkay&#39;,
+ &#39;Malamar&#39;,
+ &#39;Binacle&#39;,
+ &#39;Barbaracle&#39;,
+ &#39;Skrelp&#39;,
+ &#39;Dragalge&#39;,
+ &#39;Clauncher&#39;,
+ &#39;Clawitzer&#39;,
+ &#39;Helioptile&#39;,
+ &#39;Heliolisk&#39;,
+ &#39;Tyrunt&#39;,
+ &#39;Tyrantrum&#39;,
+ &#39;Amaura&#39;,
+ &#39;Aurorus&#39;,
+ &#39;Sylveon&#39;,
+ &#39;Hawlucha&#39;,
+ &#39;Dedenne&#39;,
+ &#39;Carbink&#39;,
+ &#39;Goomy&#39;,
+ &#39;Sliggoo&#39;,
+ &#39;Goodra&#39;,
+ &#39;Klefki&#39;,
+ &#39;Phantump&#39;,
+ &#39;Trevenant&#39;,
+ &#39;Pumpkaboo&#39;,
+ &#39;Gourgeist&#39;,
+ &#39;Bergmite&#39;,
+ &#39;Avalugg&#39;,
+ &#39;Noibat&#39;,
+ &#39;Noivern&#39;,
+ &#39;Xerneas&#39;,
+ &#39;Yveltal&#39;,
+ &#39;Zygarde&#39;,
+ &#39;Diancie&#39;,
+ &#39;Hoopa&#39;,
+ &#39;Volcanion&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">dict</span><span class="p">(</span><span class="n">google</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[62]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{0: 50.119999999999997,
+ 1: 54.100000000000001,
+ 2: 54.649999999999999,
+ 3: 52.380000000000003,
+ 4: 52.950000000000003,
+ 5: 53.899999999999999,
+ 6: 53.020000000000003,
+ 7: 50.950000000000003,
+ 8: 51.130000000000003,
+ 9: 50.07,
+ 10: 50.700000000000003,
+ 11: 49.950000000000003,
+ 12: 50.740000000000002,
+ 13: 51.100000000000001,
+ 14: 51.100000000000001,
+ 15: 52.609999999999999,
+ 16: 53.700000000000003,
+ 17: 55.689999999999998,
+ 18: 55.939999999999998,
+ 19: 56.93,
+ 20: 58.689999999999998,
+ 21: 59.619999999999997,
+ 22: 58.859999999999999,
+ 23: 59.130000000000003,
+ 24: 60.350000000000001,
+ 25: 59.859999999999999,
+ 26: 59.07,
+ 27: 63.369999999999997,
+ 28: 65.469999999999999,
+ 29: 64.739999999999995,
+ 30: 66.219999999999999,
+ 31: 67.459999999999994,
+ 32: 69.120000000000005,
+ 33: 68.469999999999999,
+ 34: 69.359999999999999,
+ 35: 68.799999999999997,
+ 36: 67.560000000000002,
+ 37: 68.629999999999995,
+ 38: 70.379999999999995,
+ 39: 70.930000000000007,
+ 40: 71.980000000000004,
+ 41: 74.510000000000005,
+ 42: 73.900000000000006,
+ 43: 70.170000000000002,
+ 44: 74.620000000000005,
+ 45: 86.129999999999995,
+ 46: 93.609999999999999,
+ 47: 90.810000000000002,
+ 48: 92.890000000000001,
+ 49: 96.549999999999997,
+ 50: 95.219999999999999,
+ 51: 97.920000000000002,
+ 52: 97.340000000000003,
+ 53: 95.739999999999995,
+ 54: 92.260000000000005,
+ 55: 84.590000000000003,
+ 56: 86.189999999999998,
+ 57: 84.269999999999996,
+ 58: 83.849999999999994,
+ 59: 91.420000000000002,
+ 60: 90.909999999999997,
+ 61: 92.340000000000003,
+ 62: 86.189999999999998,
+ 63: 86.159999999999997,
+ 64: 83.689999999999998,
+ 65: 84.620000000000005,
+ 66: 82.469999999999999,
+ 67: 83.680000000000007,
+ 68: 87.290000000000006,
+ 69: 89.609999999999999,
+ 70: 90.430000000000007,
+ 71: 90.900000000000006,
+ 72: 89.890000000000001,
+ 73: 89.609999999999999,
+ 74: 90.109999999999999,
+ 75: 88.060000000000002,
+ 76: 85.629999999999995,
+ 77: 84.909999999999997,
+ 78: 86.629999999999995,
+ 79: 85.739999999999995,
+ 80: 85.140000000000001,
+ 81: 89.260000000000005,
+ 82: 89.799999999999997,
+ 83: 88.150000000000006,
+ 84: 89.950000000000003,
+ 85: 92.420000000000002,
+ 86: 91.780000000000001,
+ 87: 93.060000000000002,
+ 88: 93.859999999999999,
+ 89: 95.859999999999999,
+ 90: 96.280000000000001,
+ 91: 96.349999999999994,
+ 92: 98.700000000000003,
+ 93: 96.299999999999997,
+ 94: 101.25,
+ 95: 97.150000000000006,
+ 96: 96.659999999999997,
+ 97: 94.180000000000007,
+ 98: 96.829999999999998,
+ 99: 97.430000000000007,
+ 100: 96.670000000000002,
+ 101: 97.590000000000003,
+ 102: 97.569999999999993,
+ 103: 99.890000000000001,
+ 104: 101.84999999999999,
+ 105: 98.549999999999997,
+ 106: 96.859999999999999,
+ 107: 94.049999999999997,
+ 108: 90.269999999999996,
+ 109: 88.469999999999999,
+ 110: 94.530000000000001,
+ 111: 93.950000000000003,
+ 112: 95.069999999999993,
+ 113: 97.709999999999994,
+ 114: 95.849999999999994,
+ 115: 102.88,
+ 116: 105.31999999999999,
+ 117: 102.08,
+ 118: 97.920000000000002,
+ 119: 99.219999999999999,
+ 120: 95.689999999999998,
+ 121: 93.900000000000006,
+ 122: 93.609999999999999,
+ 123: 96.400000000000006,
+ 124: 97.519999999999996,
+ 125: 99.109999999999999,
+ 126: 98.849999999999994,
+ 127: 98.879999999999995,
+ 128: 95.590000000000003,
+ 129: 96.879999999999995,
+ 130: 94.349999999999994,
+ 131: 92.840000000000003,
+ 132: 93.900000000000006,
+ 133: 92.939999999999998,
+ 134: 92.5,
+ 135: 93.409999999999997,
+ 136: 92.859999999999999,
+ 137: 94.310000000000002,
+ 138: 92.510000000000005,
+ 139: 90.579999999999998,
+ 140: 89.900000000000006,
+ 141: 88.810000000000002,
+ 142: 87.409999999999997,
+ 143: 89.219999999999999,
+ 144: 87.709999999999994,
+ 145: 89.560000000000002,
+ 146: 89.930000000000007,
+ 147: 90.349999999999994,
+ 148: 89.209999999999994,
+ 149: 89.400000000000006,
+ 150: 89.540000000000006,
+ 151: 90.620000000000005,
+ 152: 89.700000000000003,
+ 153: 90.129999999999995,
+ 154: 90.159999999999997,
+ 155: 89.930000000000007,
+ 156: 92.549999999999997,
+ 157: 94.189999999999998,
+ 158: 94.519999999999996,
+ 159: 96.780000000000001,
+ 160: 95.930000000000007,
+ 161: 96.519999999999996,
+ 162: 96.879999999999995,
+ 163: 96.370000000000005,
+ 164: 95.629999999999995,
+ 165: 92.409999999999997,
+ 166: 93.390000000000001,
+ 167: 95.599999999999994,
+ 168: 98.950000000000003,
+ 169: 102.01000000000001,
+ 170: 107.8,
+ 171: 111.65000000000001,
+ 172: 109.27,
+ 173: 109.78,
+ 174: 109.62,
+ 175: 109.89,
+ 176: 111.03,
+ 177: 112.98,
+ 178: 114.14,
+ 179: 113.38,
+ 180: 113.90000000000001,
+ 181: 112.90000000000001,
+ 182: 113.79000000000001,
+ 183: 115.53,
+ 184: 114.25,
+ 185: 114.51000000000001,
+ 186: 115.41,
+ 187: 116.45,
+ 188: 119.45999999999999,
+ 189: 119.47,
+ 190: 120.68000000000001,
+ 191: 127.59999999999999,
+ 192: 127.87,
+ 193: 130.27000000000001,
+ 194: 129.47,
+ 195: 132.87,
+ 196: 138.5,
+ 197: 143.86000000000001,
+ 198: 143.81,
+ 199: 139.99000000000001,
+ 200: 145.31999999999999,
+ 201: 146.41,
+ 202: 139.63999999999999,
+ 203: 143.00999999999999,
+ 204: 141.11000000000001,
+ 205: 141.22999999999999,
+ 206: 139.03999999999999,
+ 207: 137.25999999999999,
+ 208: 138.58000000000001,
+ 209: 140.0,
+ 210: 143.21000000000001,
+ 211: 143.78,
+ 212: 144.50999999999999,
+ 213: 144.71000000000001,
+ 214: 148.47999999999999,
+ 215: 151.90000000000001,
+ 216: 150.84999999999999,
+ 217: 146.21000000000001,
+ 218: 146.93000000000001,
+ 219: 145.47999999999999,
+ 220: 147.71000000000001,
+ 221: 145.62,
+ 222: 147.62,
+ 223: 147.97,
+ 224: 146.53,
+ 225: 145.75,
+ 226: 149.28,
+ 227: 150.28999999999999,
+ 228: 150.44,
+ 229: 149.62,
+ 230: 154.80000000000001,
+ 231: 155.84,
+ 232: 156.81,
+ 233: 151.05000000000001,
+ 234: 147.78,
+ 235: 147.90000000000001,
+ 236: 148.31999999999999,
+ 237: 146.59999999999999,
+ 238: 143.74000000000001,
+ 239: 145.66,
+ 240: 149.44999999999999,
+ 241: 148.5,
+ 242: 148.72,
+ 243: 146.03,
+ 244: 145.47999999999999,
+ 245: 145.63999999999999,
+ 246: 142.69999999999999,
+ 247: 141.88,
+ 248: 144.72,
+ 249: 141.86000000000001,
+ 250: 142.68000000000001,
+ 251: 142.41,
+ 252: 139.86000000000001,
+ 253: 139.86000000000001,
+ 254: 136.87,
+ 255: 139.65000000000001,
+ 256: 141.13999999999999,
+ 257: 141.15000000000001,
+ 258: 141.65000000000001,
+ 259: 144.08000000000001,
+ 260: 143.49000000000001,
+ 261: 142.86000000000001,
+ 262: 142.97999999999999,
+ 263: 144.08000000000001,
+ 264: 143.41,
+ 265: 147.28999999999999,
+ 266: 147.55000000000001,
+ 267: 149.40000000000001,
+ 268: 154.72,
+ 269: 155.68000000000001,
+ 270: 151.34999999999999,
+ 271: 151.16,
+ 272: 149.94999999999999,
+ 273: 151.74000000000001,
+ 274: 153.80000000000001,
+ 275: 155.78999999999999,
+ 276: 155.53,
+ 277: 157.52000000000001,
+ 278: 156.97999999999999,
+ 279: 156.81,
+ 280: 152.84999999999999,
+ 281: 154.66,
+ 282: 158.06999999999999,
+ 283: 159.18000000000001,
+ 284: 155.34,
+ 285: 155.19999999999999,
+ 286: 156.22,
+ 287: 156.34,
+ 288: 155.16999999999999,
+ 289: 152.90000000000001,
+ 290: 150.33000000000001,
+ 291: 148.56999999999999,
+ 292: 147.91999999999999,
+ 293: 152.34999999999999,
+ 294: 151.49000000000001,
+ 295: 154.19999999999999,
+ 296: 151.44999999999999,
+ 297: 169.78,
+ 298: 174.15000000000001,
+ 299: 173.28,
+ 300: 177.53999999999999,
+ 301: 176.34999999999999,
+ 302: 178.91,
+ 303: 185.88,
+ 304: 189.5,
+ 305: 189.65000000000001,
+ 306: 192.78,
+ 307: 195.02000000000001,
+ 308: 197.31999999999999,
+ 309: 194.75999999999999,
+ 310: 189.38999999999999,
+ 311: 195.34999999999999,
+ 312: 195.0,
+ 313: 198.28999999999999,
+ 314: 196.19999999999999,
+ 315: 198.88,
+ 316: 201.52000000000001,
+ 317: 199.90000000000001,
+ 318: 204.47999999999999,
+ 319: 208.03,
+ 320: 211.22,
+ 321: 214.09999999999999,
+ 322: 211.53,
+ 323: 201.56999999999999,
+ 324: 202.25,
+ 325: 206.84,
+ 326: 208.63999999999999,
+ 327: 202.72,
+ 328: 202.06999999999999,
+ 329: 201.91,
+ 330: 205.12,
+ 331: 204.40000000000001,
+ 332: 206.09999999999999,
+ 333: 208.53999999999999,
+ 334: 209.27000000000001,
+ 335: 211.05000000000001,
+ 336: 214.86000000000001,
+ 337: 212.09,
+ 338: 214.66,
+ 339: 212.94999999999999,
+ 340: 215.80000000000001,
+ 341: 215.25,
+ 342: 212.11000000000001,
+ 343: 213.13,
+ 344: 209.86000000000001,
+ 345: 207.22,
+ 346: 217.40000000000001,
+ 347: 222.40000000000001,
+ 348: 225.38999999999999,
+ 349: 232.59999999999999,
+ 350: 233.22,
+ 351: 234.65000000000001,
+ 352: 235.58000000000001,
+ 353: 231.58000000000001,
+ 354: 232.88999999999999,
+ 355: 233.31999999999999,
+ 356: 222.22999999999999,
+ 357: 218.0,
+ 358: 199.53,
+ 359: 213.53999999999999,
+ 360: 221.28999999999999,
+ 361: 216.28,
+ 362: 216.91999999999999,
+ 363: 216.53,
+ 364: 213.19999999999999,
+ 365: 216.11000000000001,
+ 366: 200.69,
+ 367: 197.81999999999999,
+ 368: 190.59,
+ 369: 192.36000000000001,
+ 370: 183.78,
+ 371: 184.36000000000001,
+ 372: 179.21000000000001,
+ 373: 181.12,
+ 374: 172.68000000000001,
+ 375: 171.49000000000001,
+ 376: 171.02000000000001,
+ 377: 183.05000000000001,
+ 378: 184.19,
+ 379: 183.11000000000001,
+ 380: 182.56,
+ 381: 188.84999999999999,
+ 382: 188.50999999999999,
+ 383: 194.99000000000001,
+ 384: 181.13,
+ 385: 182.22,
+ 386: 188.03999999999999,
+ 387: 188.90000000000001,
+ 388: 183.87,
+ 389: 182.03999999999999,
+ 390: 176.75999999999999,
+ 391: 171.33000000000001,
+ 392: 168.58000000000001,
+ 393: 168.36000000000001,
+ 394: 175.40000000000001,
+ 395: 172.08000000000001,
+ 396: 169.22,
+ 397: 169.72999999999999,
+ 398: 173.91999999999999,
+ 399: 169.78999999999999,
+ 400: 169.94,
+ 401: 170.77000000000001,
+ 402: 182.72,
+ 403: 184.66,
+ 404: 188.41,
+ 405: 197.28999999999999,
+ 406: 194.03,
+ 407: 194.80000000000001,
+ 408: 194.66,
+ 409: 201.97,
+ 410: 203.78999999999999,
+ 411: 205.38,
+ 412: 202.88,
+ 413: 207.97999999999999,
+ 414: 204.63,
+ 415: 204.27000000000001,
+ 416: 200.88,
+ 417: 203.21000000000001,
+ 418: 201.91999999999999,
+ 419: 205.03999999999999,
+ 420: 207.28999999999999,
+ 421: 218.33000000000001,
+ 422: 220.03,
+ 423: 213.37,
+ 424: 212.77000000000001,
+ 425: 209.80000000000001,
+ 426: 208.75999999999999,
+ 427: 199.25,
+ 428: 197.19999999999999,
+ 429: 196.88999999999999,
+ 430: 197.18000000000001,
+ 431: 196.94999999999999,
+ 432: 197.19,
+ 433: 204.19999999999999,
+ 434: 201.28999999999999,
+ 435: 193.31,
+ 436: 186.88,
+ 437: 187.91,
+ 438: 185.46000000000001,
+ 439: 187.06,
+ 440: 185.31,
+ 441: 184.81999999999999,
+ 442: 185.28999999999999,
+ 443: 187.59999999999999,
+ 444: 190.43000000000001,
+ 445: 191.30000000000001,
+ 446: 190.47999999999999,
+ 447: 185.78,
+ 448: 185.72,
+ 449: 191.12,
+ 450: 189.53,
+ 451: 187.03,
+ 452: 194.80000000000001,
+ 453: 193.06,
+ 454: 196.44999999999999,
+ 455: 193.09,
+ 456: 190.58000000000001,
+ 457: 193.06999999999999,
+ 458: 192.0,
+ 459: 195.30000000000001,
+ 460: 195.15000000000001,
+ 461: 193.88,
+ 462: 193.38999999999999,
+ 463: 200.86000000000001,
+ 464: 199.78,
+ 465: 202.22999999999999,
+ 466: 201.91,
+ 467: 200.96000000000001,
+ 468: 202.84999999999999,
+ 469: 208.69999999999999,
+ 470: 209.46000000000001,
+ 471: 211.38999999999999,
+ 472: 210.52000000000001,
+ 473: 211.38,
+ 474: 210.00999999999999,
+ 475: 208.88999999999999,
+ 476: 212.06999999999999,
+ 477: 208.41999999999999,
+ 478: 204.21000000000001,
+ 479: 201.55000000000001,
+ 480: 203.74000000000001,
+ 481: 201.31999999999999,
+ 482: 199.30000000000001,
+ 483: 193.37,
+ 484: 194.86000000000001,
+ 485: 195.25,
+ 486: 194.49000000000001,
+ 487: 192.56,
+ 488: 191.00999999999999,
+ 489: 193.87,
+ 490: 193.11000000000001,
+ 491: 187.56999999999999,
+ 492: 183.43000000000001,
+ 493: 187.50999999999999,
+ 494: 186.74000000000001,
+ 495: 188.78999999999999,
+ 496: 190.31,
+ 497: 188.28,
+ 498: 186.91,
+ 499: 184.06999999999999,
+ 500: 184.53,
+ 501: 190.28999999999999,
+ 502: 193.66999999999999,
+ 503: 192.71000000000001,
+ 504: 191.49000000000001,
+ 505: 188.46000000000001,
+ 506: 188.96000000000001,
+ 507: 186.53,
+ 508: 186.68000000000001,
+ 509: 186.44,
+ 510: 190.28,
+ 511: 189.28999999999999,
+ 512: 190.18000000000001,
+ 513: 189.08000000000001,
+ 514: 189.11000000000001,
+ 515: 191.99000000000001,
+ 516: 189.88,
+ 517: 189.06,
+ 518: 188.74000000000001,
+ 519: 191.84999999999999,
+ 520: 195.75,
+ 521: 203.08000000000001,
+ 522: 201.78999999999999,
+ 523: 204.74000000000001,
+ 524: 207.13999999999999,
+ 525: 201.69999999999999,
+ 526: 198.30000000000001,
+ 527: 203.22,
+ 528: 201.69,
+ 529: 201.78999999999999,
+ 530: 203.22999999999999,
+ 531: 201.25999999999999,
+ 532: 201.59,
+ 533: 200.75,
+ 534: 200.52000000000001,
+ 535: 201.81999999999999,
+ 536: 207.63999999999999,
+ 537: 205.69999999999999,
+ 538: 210.03999999999999,
+ 539: 214.28999999999999,
+ 540: 213.11000000000001,
+ 541: 213.03999999999999,
+ 542: 213.50999999999999,
+ 543: 213.44,
+ 544: 210.66,
+ 545: 210.11000000000001,
+ 546: 209.44,
+ 547: 212.81999999999999,
+ 548: 229.61000000000001,
+ 549: 240.15000000000001,
+ 550: 236.41999999999999,
+ 551: 243.06,
+ 552: 242.31,
+ 553: 237.36000000000001,
+ 554: 238.05000000000001,
+ 555: 237.96000000000001,
+ 556: 233.52000000000001,
+ 557: 234.72,
+ 558: 235.66,
+ 559: 238.24000000000001,
+ 560: 236.05000000000001,
+ 561: 237.25999999999999,
+ 562: 236.08000000000001,
+ 563: 236.53999999999999,
+ 564: 240.27000000000001,
+ 565: 244.41,
+ 566: 245.72,
+ 567: 247.69999999999999,
+ 568: 249.15000000000001,
+ 569: 247.28,
+ 570: 254.56999999999999,
+ 571: 253.75,
+ 572: 252.19999999999999,
+ 573: 242.13,
+ 574: 244.50999999999999,
+ 575: 242.08000000000001,
+ 576: 242.16,
+ 577: 240.16,
+ 578: 242.18000000000001,
+ 579: 243.25999999999999,
+ 580: 244.11000000000001,
+ 581: 241.08000000000001,
+ 582: 241.81,
+ 583: 241.72,
+ 584: 240.65000000000001,
+ 585: 239.25999999999999,
+ 586: 240.81999999999999,
+ 587: 239.91,
+ 588: 231.16999999999999,
+ 589: 234.08000000000001,
+ 590: 231.22,
+ 591: 227.87,
+ 592: 227.56,
+ 593: 228.53999999999999,
+ 594: 233.78,
+ 595: 231.05000000000001,
+ 596: 230.00999999999999,
+ 597: 233.56,
+ 598: 241.38999999999999,
+ 599: 243.34999999999999,
+ 600: 241.55000000000001,
+ 601: 242.50999999999999,
+ 602: 244.49000000000001,
+ 603: 249.61000000000001,
+ 604: 252.25,
+ 605: 251.88999999999999,
+ 606: 248.38999999999999,
+ 607: 243.66999999999999,
+ 608: 244.63,
+ 609: 240.18000000000001,
+ 610: 239.28999999999999,
+ 611: 249.28,
+ 612: 243.80000000000001,
+ 613: 247.66999999999999,
+ 614: 245.99000000000001,
+ 615: 246.91,
+ 616: 250.5,
+ 617: 240.63,
+ 618: 240.50999999999999,
+ 619: 233.34999999999999,
+ 620: 235.5,
+ 621: 234.77000000000001,
+ 622: 235.28,
+ 623: 230.71000000000001,
+ 624: 228.91999999999999,
+ 625: 229.31999999999999,
+ 626: 232.72999999999999,
+ 627: 230.5,
+ 628: 234.74000000000001,
+ 629: 235.81,
+ 630: 237.69,
+ 631: 237.69,
+ 632: 235.06999999999999,
+ 633: 232.22999999999999,
+ 634: 224.16,
+ 635: 224.5,
+ 636: 223.88999999999999,
+ 637: 219.12,
+ 638: 220.25,
+ 639: 228.55000000000001,
+ 640: 227.59,
+ 641: 227.13,
+ 642: 226.25,
+ 643: 227.15000000000001,
+ 644: 221.28999999999999,
+ 645: 223.78,
+ 646: 222.87,
+ 647: 220.19999999999999,
+ 648: 223.38999999999999,
+ 649: 222.41999999999999,
+ 650: 228.05000000000001,
+ 651: 230.78999999999999,
+ 652: 230.68000000000001,
+ 653: 232.27000000000001,
+ 654: 231.58000000000001,
+ 655: 230.71000000000001,
+ 656: 230.22999999999999,
+ 657: 228.84999999999999,
+ 658: 229.03999999999999,
+ 659: 236.06,
+ 660: 235.27000000000001,
+ 661: 235.52000000000001,
+ 662: 233.87,
+ 663: 233.02000000000001,
+ 664: 232.03,
+ 665: 233.46000000000001,
+ 666: 232.91,
+ 667: 236.90000000000001,
+ 668: 236.16,
+ 669: 237.77000000000001,
+ 670: 235.59,
+ 671: 241.0,
+ 672: 239.30000000000001,
+ 673: 238.53,
+ 674: 238.75999999999999,
+ 675: 240.34999999999999,
+ 676: 239.27000000000001,
+ 677: 235.44999999999999,
+ 678: 234.27000000000001,
+ 679: 232.66,
+ 680: 236.38,
+ 681: 235.31999999999999,
+ 682: 233.40000000000001,
+ 683: 233.16999999999999,
+ 684: 234.38999999999999,
+ 685: 230.5,
+ 686: 233.13999999999999,
+ 687: 230.66,
+ 688: 228.77000000000001,
+ 689: 236.06999999999999,
+ 690: 235.24000000000001,
+ 691: 234.91999999999999,
+ 692: 235.06,
+ 693: 237.69,
+ 694: 236.75,
+ 695: 236.93000000000001,
+ 696: 241.52000000000001,
+ 697: 243.31,
+ 698: 249.05000000000001,
+ 699: 248.71000000000001,
+ 700: 249.94999999999999,
+ 701: 253.28,
+ 702: 259.16000000000003,
+ 703: 258.87,
+ 704: 257.26999999999998,
+ 705: 257.49000000000001,
+ 706: 255.41,
+ 707: 252.13,
+ 708: 252.37,
+ 709: 251.16999999999999,
+ 710: 252.69,
+ 711: 257.33999999999997,
+ 712: 256.89999999999998,
+ 713: 254.72999999999999,
+ 714: 256.80000000000001,
+ 715: 262.23000000000002,
+ 716: 263.44999999999999,
+ 717: 264.86000000000001,
+ 718: 262.88,
+ 719: 262.24000000000001,
+ 720: 261.08999999999997,
+ 721: 264.92000000000002,
+ 722: 266.89999999999998,
+ 723: 270.54000000000002,
+ 724: 269.43000000000001,
+ 725: 271.00999999999999,
+ 726: 271.39999999999998,
+ 727: 271.95999999999998,
+ 728: 272.38999999999999,
+ 729: 275.80000000000001,
+ 730: 276.22000000000003,
+ 731: 277.22000000000003,
+ 732: 274.48000000000002,
+ 733: 274.01999999999998,
+ 734: 259.80000000000001,
+ 735: 256.0,
+ 736: 256.74000000000001,
+ 737: 254.63,
+ 738: 253.75,
+ 739: 255.69,
+ 740: 257.80000000000001,
+ 741: 254.74000000000001,
+ 742: 256.20999999999998,
+ 743: 255.25,
+ 744: 251.25,
+ 745: 254.74000000000001,
+ 746: 257.75,
+ 747: 262.63,
+ 748: 257.11000000000001,
+ 749: 257.62,
+ 750: 257.49000000000001,
+ 751: 254.05000000000001,
+ 752: 248.53,
+ 753: 245.50999999999999,
+ 754: 249.77000000000001,
+ 755: 248.71000000000001,
+ 756: 253.05000000000001,
+ 757: 256.12,
+ 758: 255.84,
+ 759: 257.24000000000001,
+ 760: 256.37,
+ 761: 252.94999999999999,
+ 762: 256.18000000000001,
+ 763: 255.44,
+ 764: 257.37,
+ 765: 262.31,
+ 766: 263.63999999999999,
+ 767: 261.5,
+ 768: 259.42000000000002,
+ 769: 256.98000000000002,
+ 770: 260.39999999999998,
+ 771: 261.06,
+ 772: 262.13,
+ 773: 264.11000000000001,
+ 774: 262.38999999999999,
+ 775: 267.37,
+ 776: 273.14999999999998,
+ 777: 276.13999999999999,
+ 778: 279.76999999999998,
+ 779: 283.73000000000002,
+ 780: 284.22000000000003,
+ 781: 283.80000000000001,
+ 782: 283.47000000000003,
+ 783: 283.35000000000002,
+ 784: 290.98000000000002,
+ 785: 291.89999999999998,
+ 786: 291.72000000000003,
+ 787: 289.23000000000002,
+ 788: 296.73000000000002,
+ 789: 304.50999999999999,
+ 790: 307.27999999999997,
+ 791: 312.38,
+ 792: 310.69,
+ 793: 318.38,
+ 794: 309.74000000000001,
+ 795: 307.69,
+ 796: 316.42000000000002,
+ 797: 319.49000000000001,
+ 798: 322.02999999999997,
+ 799: 325.05000000000001,
+ 800: 337.55000000000001,
+ 801: 337.56999999999999,
+ 802: 333.92000000000002,
+ 803: 336.95999999999998,
+ 804: 339.27999999999997,
+ 805: 347.04000000000002,
+ 806: 353.14999999999998,
+ 807: 351.25,
+ 808: 355.26999999999998,
+ 809: 362.45999999999998,
+ 810: 370.51999999999998,
+ 811: 366.10000000000002,
+ 812: 346.56999999999999,
+ 813: 331.64999999999998,
+ 814: 315.72000000000003,
+ 815: 329.94,
+ 816: 320.51999999999998,
+ 817: 314.50999999999999,
+ 818: 316.5,
+ 819: 312.61000000000001,
+ 820: 323.94999999999999,
+ 821: 329.93000000000001,
+ 822: 338.00999999999999,
+ 823: 332.69999999999999,
+ 824: 336.44999999999999,
+ 825: 345.77999999999997,
+ 826: 348.14999999999998,
+ 827: 346.14999999999998,
+ 828: 340.42000000000002,
+ 829: 341.74000000000001,
+ 830: 348.91000000000003,
+ 831: 357.26999999999998,
+ 832: 357.07999999999998,
+ 833: 358.85000000000002,
+ 834: 349.25,
+ 835: 349.32999999999998,
+ 836: 346.68000000000001,
+ 837: 344.63999999999999,
+ 838: 334.27999999999997,
+ 839: 336.33999999999997,
+ 840: 338.35000000000002,
+ 841: 344.5,
+ 842: 348.0,
+ 843: 350.00999999999999,
+ 844: 355.06,
+ 845: 350.01999999999998,
+ 846: 350.91000000000003,
+ 847: 345.38999999999999,
+ 848: 342.25,
+ 849: 342.31999999999999,
+ 850: 328.17000000000002,
+ 851: 324.30000000000001,
+ 852: 315.51999999999998,
+ 853: 326.26999999999998,
+ 854: 323.04000000000002,
+ 855: 318.81,
+ 856: 326.57999999999998,
+ 857: 318.50999999999999,
+ 858: 307.67000000000002,
+ 859: 300.08999999999997,
+ 860: 299.81999999999999,
+ 861: 291.88,
+ 862: 274.04000000000002,
+ 863: 286.95999999999998,
+ 864: 282.92000000000002,
+ 865: 277.70999999999998,
+ 866: 274.98000000000002,
+ 867: 273.86000000000001,
+ 868: 281.87,
+ 869: 257.69,
+ 870: 247.47,
+ 871: 253.15000000000001,
+ 872: 250.59999999999999,
+ 873: 252.22,
+ 874: 258.08999999999997,
+ 875: 260.31999999999999,
+ 876: 258.79000000000002,
+ 877: 267.04000000000002,
+ 878: 265.86000000000001,
+ 879: 264.56,
+ 880: 254.22,
+ 881: 254.25,
+ 882: 251.18000000000001,
+ 883: 253.65000000000001,
+ 884: 242.97999999999999,
+ 885: 231.86000000000001,
+ 886: 236.19,
+ 887: 237.46000000000001,
+ 888: 235.34999999999999,
+ 889: 228.28,
+ 890: 222.08000000000001,
+ 891: 223.63,
+ 892: 216.13,
+ 893: 216.46000000000001,
+ 894: 206.59999999999999,
+ 895: 219.69999999999999,
+ 896: 219.87,
+ 897: 221.28,
+ 898: 218.74000000000001,
+ 899: 209.72999999999999,
+ 900: 219.36000000000001,
+ 901: 215.78,
+ 902: 216.56,
+ 903: 230.05000000000001,
+ 904: 225.16,
+ 905: 228.87,
+ 906: 221.81999999999999,
+ 907: 218.81999999999999,
+ 908: 220.00999999999999,
+ 909: 232.62,
+ 910: 232.62,
+ 911: 227.33000000000001,
+ 912: 235.31,
+ 913: 238.16999999999999,
+ 914: 233.66999999999999,
+ 915: 231.86000000000001,
+ 916: 234.30000000000001,
+ 917: 228.5,
+ 918: 225.59999999999999,
+ 919: 223.19999999999999,
+ 920: 227.28999999999999,
+ 921: 224.55000000000001,
+ 922: 269.44,
+ 923: 268.63,
+ 924: 277.22000000000003,
+ 925: 272.97000000000003,
+ 926: 271.25,
+ 927: 271.75999999999999,
+ 928: 275.77999999999997,
+ 929: 278.95999999999998,
+ 930: 286.86000000000001,
+ 931: 296.24000000000001,
+ 932: 290.35000000000002,
+ 933: 297.14999999999998,
+ 934: 292.88999999999999,
+ 935: 289.20999999999998,
+ 936: 291.20999999999998,
+ 937: 286.30000000000001,
+ 938: 292.18000000000001,
+ 939: 291.20999999999998,
+ 940: 287.86000000000001,
+ 941: 290.20999999999998,
+ 942: 289.74000000000001,
+ 943: 288.47000000000003,
+ 944: 289.00999999999999,
+ 945: 274.72000000000003,
+ 946: 274.45999999999998,
+ 947: 272.04000000000002,
+ 948: 280.17000000000002,
+ 949: 283.83999999999997,
+ 950: 291.20999999999998,
+ 951: 292.61000000000001,
+ 952: 287.20999999999998,
+ 953: 283.37,
+ 954: 285.81999999999999,
+ 955: 292.86000000000001,
+ 956: 283.22000000000003,
+ 957: 278.66000000000003,
+ 958: 276.81,
+ 959: 272.32999999999998,
+ 960: 276.19999999999999,
+ 961: 285.47000000000003,
+ 962: 286.12,
+ 963: 284.44999999999999,
+ 964: 280.91000000000003,
+ 965: 279.81999999999999,
+ 966: 272.94,
+ 967: 272.32999999999998,
+ 968: 270.88,
+ 969: 275.22000000000003,
+ 970: 264.14999999999998,
+ 971: 263.76999999999998,
+ 972: 262.94999999999999,
+ 973: 267.10000000000002,
+ 974: 263.25999999999999,
+ 975: 268.23000000000002,
+ 976: 271.68000000000001,
+ 977: 276.99000000000001,
+ 978: 270.5,
+ 979: 270.01999999999998,
+ 980: 266.63,
+ 981: 260.55000000000001,
+ 982: 257.79000000000002,
+ 983: 267.52999999999997,
+ 984: 266.44999999999999,
+ 985: 240.41999999999999,
+ 986: 234.16999999999999,
+ 987: 238.31999999999999,
+ 988: 244.37,
+ 989: 237.56999999999999,
+ 990: 245.74000000000001,
+ 991: 238.31999999999999,
+ 992: 241.31,
+ 993: 241.11000000000001,
+ 994: 236.63999999999999,
+ 995: 233.69999999999999,
+ 996: 231.27000000000001,
+ 997: 239.69,
+ 998: 242.93000000000001,
+ 999: 239.31999999999999,
+ ...}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">max</span><span class="p">(</span><span class="n">pokemon</span><span class="p">)</span>
+<span class="nb">min</span><span class="p">(</span><span class="n">pokemon</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[64]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Abomasnow&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">max</span><span class="p">(</span><span class="n">google</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[65]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>782.22000000000003</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">min</span><span class="p">(</span><span class="n">google</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[66]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>49.950000000000003</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="More-Series-Attributes">More <code>Series</code> Attributes<a class="anchor-link" href="#More-Series-Attributes">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;pokemon.csv&quot;</span><span class="p">,</span> <span class="n">usecols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Pokemon&quot;</span><span class="p">],</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">google</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;google_stock_price.csv&quot;</span><span class="p">,</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span><span class="o">.</span><span class="n">values</span>
+<span class="n">google</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[77]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([  50.12,   54.1 ,   54.65, ...,  773.18,  771.61,  782.22])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span><span class="o">.</span><span class="n">index</span>
+<span class="n">google</span><span class="o">.</span><span class="n">index</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[79]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>RangeIndex(start=0, stop=3012, step=1)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span><span class="o">.</span><span class="n">dtype</span>
+<span class="n">google</span><span class="o">.</span><span class="n">dtype</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[81]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>dtype(&#39;float64&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span><span class="o">.</span><span class="n">is_unique</span>
+<span class="n">google</span><span class="o">.</span><span class="n">is_unique</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[83]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span><span class="o">.</span><span class="n">ndim</span>
+<span class="n">google</span><span class="o">.</span><span class="n">ndim</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[85]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">google</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[87]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(3012,)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[89]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span><span class="o">.</span><span class="n">size</span>
+<span class="n">google</span><span class="o">.</span><span class="n">size</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[89]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3012</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[93]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Pocket Monsters&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[94]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[94]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0     Bulbasaur
+1       Ivysaur
+2      Venusaur
+3    Charmander
+4    Charmeleon
+Name: Pocket Monsters, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="The-.sort_values()-Method">The <code>.sort_values()</code> Method<a class="anchor-link" href="#The-.sort_values()-Method">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[95]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;pokemon.csv&quot;</span><span class="p">,</span> <span class="n">usecols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Pokemon&quot;</span><span class="p">],</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">google</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;google_stock_price.csv&quot;</span><span class="p">,</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[97]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[97]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>459    Abomasnow
+62          Abra
+358        Absol
+616     Accelgor
+680    Aegislash
+Name: Pokemon, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[100]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[100]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>680    Aegislash
+616     Accelgor
+358        Absol
+62          Abra
+459    Abomasnow
+Name: Pokemon, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[104]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[104]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3011    782.22
+Name: Stock Price, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[106]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[106]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0        50.12
+1        54.10
+2        54.65
+3        52.38
+4        52.95
+5        53.90
+6        53.02
+7        50.95
+8        51.13
+9        50.07
+10       50.70
+11       49.95
+12       50.74
+13       51.10
+14       51.10
+15       52.61
+16       53.70
+17       55.69
+18       55.94
+19       56.93
+20       58.69
+21       59.62
+22       58.86
+23       59.13
+24       60.35
+25       59.86
+26       59.07
+27       63.37
+28       65.47
+29       64.74
+         ...  
+2982    675.22
+2983    668.26
+2984    680.04
+2985    684.11
+2986    692.10
+2987    699.21
+2988    694.49
+2989    697.77
+2990    695.36
+2991    705.63
+2992    715.09
+2993    720.64
+2994    716.98
+2995    720.95
+2996    719.85
+2997    733.78
+2998    736.96
+2999    741.19
+3000    738.63
+3001    742.74
+3002    739.77
+3003    738.42
+3004    741.77
+3005    745.91
+3006    768.79
+3007    772.88
+3008    771.07
+3009    773.18
+3010    771.61
+3011    782.22
+Name: Stock Price, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="The-inplace-Parameter">The <code>inplace</code> Parameter<a class="anchor-link" href="#The-inplace-Parameter">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[112]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;pokemon.csv&quot;</span><span class="p">,</span> <span class="n">usecols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Pokemon&quot;</span><span class="p">],</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">google</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;google_stock_price.csv&quot;</span><span class="p">,</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[113]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[113]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    50.12
+1    54.10
+2    54.65
+Name: Stock Price, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[115]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span> <span class="o">=</span> <span class="n">google</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[118]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[118]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>11    49.95
+9     50.07
+0     50.12
+Name: Stock Price, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[119]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span> <span class="o">=</span> <span class="bp">False</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[120]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[120]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3011    782.22
+2859    776.60
+3009    773.18
+Name: Stock Price, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="The-.sort_index()-Method">The <code>.sort_index()</code> Method<a class="anchor-link" href="#The-.sort_index()-Method">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[129]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;pokemon.csv&quot;</span><span class="p">,</span> <span class="n">usecols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Pokemon&quot;</span><span class="p">],</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">google</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;google_stock_price.csv&quot;</span><span class="p">,</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[133]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span> <span class="o">=</span> <span class="bp">False</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[139]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[139]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    Bulbasaur
+1      Ivysaur
+2     Venusaur
+Name: Pokemon, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[138]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span><span class="o">.</span><span class="n">sort_index</span><span class="p">(</span><span class="n">ascending</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Python's-in-Keyword">Python's <code>in</code> Keyword<a class="anchor-link" href="#Python's-in-Keyword">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[149]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;pokemon.csv&quot;</span><span class="p">,</span> <span class="n">usecols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Pokemon&quot;</span><span class="p">],</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">google</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;google_stock_price.csv&quot;</span><span class="p">,</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[151]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="mi">100</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[151]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[152]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[152]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    Bulbasaur
+1      Ivysaur
+2     Venusaur
+Name: Pokemon, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[155]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="mi">100</span> <span class="ow">in</span> <span class="n">pokemon</span>
+<span class="mi">100</span> <span class="ow">in</span> <span class="n">pokemon</span><span class="o">.</span><span class="n">index</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[155]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[156]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span><span class="o">.</span><span class="n">index</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[156]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>RangeIndex(start=0, stop=721, step=1)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[161]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="s2">&quot;Digimon&quot;</span> <span class="ow">in</span> <span class="n">pokemon</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[161]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Extract-Values-by-Index-Position">Extract Values by Index Position<a class="anchor-link" href="#Extract-Values-by-Index-Position">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[162]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;pokemon.csv&quot;</span><span class="p">,</span> <span class="n">usecols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Pokemon&quot;</span><span class="p">],</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">google</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;google_stock_price.csv&quot;</span><span class="p">,</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[163]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[163]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    Bulbasaur
+1      Ivysaur
+2     Venusaur
+Name: Pokemon, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[172]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">pokemon</span><span class="p">[[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">]]</span>
+
+<span class="n">pokemon</span><span class="p">[</span><span class="mi">50</span><span class="p">:</span><span class="mi">101</span><span class="p">]</span>
+
+<span class="n">pokemon</span><span class="p">[:</span><span class="mi">50</span><span class="p">]</span>
+
+<span class="n">pokemon</span><span class="p">[</span><span class="o">-</span><span class="mi">30</span><span class="p">:]</span>
+
+<span class="n">pokemon</span><span class="p">[</span><span class="o">-</span><span class="mi">30</span> <span class="p">:</span> <span class="o">-</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[172]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>691     Clauncher
+692     Clawitzer
+693    Helioptile
+694     Heliolisk
+695        Tyrunt
+696     Tyrantrum
+697        Amaura
+698       Aurorus
+699       Sylveon
+700      Hawlucha
+701       Dedenne
+702       Carbink
+703         Goomy
+704       Sliggoo
+705        Goodra
+706        Klefki
+707      Phantump
+708     Trevenant
+709     Pumpkaboo
+710     Gourgeist
+Name: Pokemon, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Extract-Values-by-Index-Label">Extract Values by Index Label<a class="anchor-link" href="#Extract-Values-by-Index-Label">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[176]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;pokemon.csv&quot;</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="s2">&quot;Pokemon&quot;</span><span class="p">,</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">pokemon</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[176]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Pokemon
+Bulbasaur    Grass
+Ivysaur      Grass
+Venusaur     Grass
+Name: Type, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[178]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span><span class="p">[[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">134</span><span class="p">]]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[178]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Pokemon
+Electrode    Electric
+Jolteon      Electric
+Name: Type, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[185]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span><span class="p">[</span><span class="s2">&quot;Bulbasaur&quot;</span><span class="p">]</span>
+<span class="n">pokemon</span><span class="p">[</span><span class="s2">&quot;Ditto&quot;</span><span class="p">]</span>
+<span class="n">pokemon</span><span class="p">[[</span><span class="s2">&quot;Charizard&quot;</span><span class="p">,</span> <span class="s2">&quot;Jolteon&quot;</span><span class="p">]]</span>
+<span class="n">pokemon</span><span class="p">[[</span><span class="s2">&quot;Blastoise&quot;</span><span class="p">,</span> <span class="s2">&quot;Venusaur&quot;</span><span class="p">,</span> <span class="s2">&quot;Meowth&quot;</span><span class="p">]]</span>
+
+<span class="n">pokemon</span><span class="p">[[</span><span class="s2">&quot;Pikachu&quot;</span><span class="p">,</span> <span class="s2">&quot;Digimon&quot;</span><span class="p">]]</span>
+
+<span class="n">pokemon</span><span class="p">[</span><span class="s2">&quot;Bulbasaur&quot;</span> <span class="p">:</span> <span class="s2">&quot;Pikachu&quot;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[185]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Pokemon
+Bulbasaur        Grass
+Ivysaur          Grass
+Venusaur         Grass
+Charmander        Fire
+Charmeleon        Fire
+Charizard         Fire
+Squirtle         Water
+Wartortle        Water
+Blastoise        Water
+Caterpie           Bug
+Metapod            Bug
+Butterfree         Bug
+Weedle             Bug
+Kakuna             Bug
+Beedrill           Bug
+Pidgey          Normal
+Pidgeotto       Normal
+Pidgeot         Normal
+Rattata         Normal
+Raticate        Normal
+Spearow         Normal
+Fearow          Normal
+Ekans           Poison
+Arbok           Poison
+Pikachu       Electric
+Name: Type, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="The-.get()-Method-on-a-Series">The <code>.get()</code> Method on a <code>Series</code><a class="anchor-link" href="#The-.get()-Method-on-a-Series">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[192]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;pokemon.csv&quot;</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="s2">&quot;Pokemon&quot;</span><span class="p">,</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">pokemon</span><span class="o">.</span><span class="n">sort_index</span><span class="p">(</span><span class="n">inplace</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">pokemon</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[192]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Pokemon
+Abomasnow      Grass
+Abra         Psychic
+Absol           Dark
+Name: Type, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[195]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Moltres&quot;</span><span class="p">,</span> <span class="s2">&quot;Meowth&quot;</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[195]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Pokemon
+Moltres      Fire
+Meowth     Normal
+Name: Type, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[199]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;Charizard&quot;</span><span class="p">,</span> <span class="n">default</span> <span class="o">=</span> <span class="s2">&quot;This is not a Pokemon&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[199]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Fire&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[202]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;jksajk&quot;</span><span class="p">,</span> <span class="n">default</span> <span class="o">=</span> <span class="s2">&quot;This is not a Pokemon&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[202]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;This is not a Pokemon&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Math-Methods-on-Series-Objects">Math Methods on <code>Series</code> Objects<a class="anchor-link" href="#Math-Methods-on-Series-Objects">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[219]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;google_stock_price.csv&quot;</span><span class="p">,</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">google</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[219]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    50.12
+1    54.10
+2    54.65
+Name: Stock Price, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[220]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[220]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3012</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[221]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">google</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[221]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3012</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[222]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[222]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1006942.0000000002</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[223]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[223]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>334.31009296148744</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[224]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">google</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[224]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>334.31009296148744</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[225]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[225]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>173.18720477113106</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[226]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[226]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>49.950000000000003</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[227]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[227]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>782.22000000000003</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[228]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[228]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>283.315</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[229]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[229]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    291.21
+dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[230]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[230]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>count    3012.000000
+mean      334.310093
+std       173.187205
+min        49.950000
+25%       218.045000
+50%       283.315000
+75%       443.000000
+max       782.220000
+Name: Stock Price, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="The-.idxmax()-and-.idxmin()-Methods">The <code>.idxmax()</code> and <code>.idxmin()</code> Methods<a class="anchor-link" href="#The-.idxmax()-and-.idxmin()-Methods">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[232]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;google_stock_price.csv&quot;</span><span class="p">,</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[233]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[233]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>782.22000000000003</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[234]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[234]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>49.950000000000003</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[235]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[235]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3011</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[236]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span><span class="p">[</span><span class="mi">3011</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[236]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>782.22000000000003</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[237]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span><span class="o">.</span><span class="n">idxmin</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[237]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>11</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[238]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[238]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>49.950000000000003</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[239]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span><span class="p">[</span><span class="n">google</span><span class="o">.</span><span class="n">idxmin</span><span class="p">()]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[239]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>49.950000000000003</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="The-.value_counts()-Method">The <code>.value_counts()</code> Method<a class="anchor-link" href="#The-.value_counts()-Method">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[240]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;pokemon.csv&quot;</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="s2">&quot;Pokemon&quot;</span><span class="p">,</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">pokemon</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[240]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Pokemon
+Bulbasaur    Grass
+Ivysaur      Grass
+Venusaur     Grass
+Name: Type, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[242]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[242]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>721</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[243]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[243]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>721</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[246]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">ascending</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[246]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Flying        3
+Fairy        17
+Steel        22
+Ice          23
+Ghost        23
+Dragon       24
+Fighting     25
+Dark         28
+Poison       28
+Ground       30
+Electric     36
+Rock         41
+Psychic      47
+Fire         47
+Bug          63
+Grass        66
+Normal       93
+Water       105
+Name: Type, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="The-.apply()-Method">The <code>.apply()</code> Method<a class="anchor-link" href="#The-.apply()-Method">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[255]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;google_stock_price.csv&quot;</span><span class="p">,</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">google</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[255]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    50.12
+1    54.10
+2    54.65
+3    52.38
+4    52.95
+5    53.90
+Name: Stock Price, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[256]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">classify_performance</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">&lt;</span> <span class="mi">300</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;OK&quot;</span>
+    <span class="k">elif</span> <span class="n">number</span> <span class="o">&gt;=</span> <span class="mi">300</span> <span class="ow">and</span> <span class="n">number</span> <span class="o">&lt;</span> <span class="mi">650</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Satisfactory&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Incredible!&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[258]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">classify_performance</span><span class="p">)</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[258]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3007    Incredible!
+3008    Incredible!
+3009    Incredible!
+3010    Incredible!
+3011    Incredible!
+Name: Stock Price, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[259]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[259]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    50.12
+1    54.10
+2    54.65
+3    52.38
+4    52.95
+5    53.90
+Name: Stock Price, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[260]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">google</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">stock_price</span> <span class="p">:</span> <span class="n">stock_price</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[260]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0        51.12
+1        55.10
+2        55.65
+3        53.38
+4        53.95
+5        54.90
+6        54.02
+7        51.95
+8        52.13
+9        51.07
+10       51.70
+11       50.95
+12       51.74
+13       52.10
+14       52.10
+15       53.61
+16       54.70
+17       56.69
+18       56.94
+19       57.93
+20       59.69
+21       60.62
+22       59.86
+23       60.13
+24       61.35
+25       60.86
+26       60.07
+27       64.37
+28       66.47
+29       65.74
+         ...  
+2982    676.22
+2983    669.26
+2984    681.04
+2985    685.11
+2986    693.10
+2987    700.21
+2988    695.49
+2989    698.77
+2990    696.36
+2991    706.63
+2992    716.09
+2993    721.64
+2994    717.98
+2995    721.95
+2996    720.85
+2997    734.78
+2998    737.96
+2999    742.19
+3000    739.63
+3001    743.74
+3002    740.77
+3003    739.42
+3004    742.77
+3005    746.91
+3006    769.79
+3007    773.88
+3008    772.07
+3009    774.18
+3010    772.61
+3011    783.22
+Name: Stock Price, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="The-.map()-Method">The <code>.map()</code> Method<a class="anchor-link" href="#The-.map()-Method">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[261]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon_names</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;pokemon.csv&quot;</span><span class="p">,</span> <span class="n">usecols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Pokemon&quot;</span><span class="p">],</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">pokemon_names</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[261]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    Bulbasaur
+1      Ivysaur
+2     Venusaur
+Name: Pokemon, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[262]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon_types</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;pokemon.csv&quot;</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="s2">&quot;Pokemon&quot;</span><span class="p">,</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">pokemon_types</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[262]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Pokemon
+Bulbasaur    Grass
+Ivysaur      Grass
+Venusaur     Grass
+Name: Type, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[263]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon_names</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">pokemon_types</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[263]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0         Grass
+1         Grass
+2         Grass
+3          Fire
+4          Fire
+5          Fire
+6         Water
+7         Water
+8         Water
+9           Bug
+10          Bug
+11          Bug
+12          Bug
+13          Bug
+14          Bug
+15       Normal
+16       Normal
+17       Normal
+18       Normal
+19       Normal
+20       Normal
+21       Normal
+22       Poison
+23       Poison
+24     Electric
+25     Electric
+26       Ground
+27       Ground
+28       Poison
+29       Poison
+         ...   
+691       Water
+692       Water
+693    Electric
+694    Electric
+695        Rock
+696        Rock
+697        Rock
+698        Rock
+699       Fairy
+700    Fighting
+701    Electric
+702        Rock
+703      Dragon
+704      Dragon
+705      Dragon
+706       Steel
+707       Ghost
+708       Ghost
+709       Ghost
+710       Ghost
+711         Ice
+712         Ice
+713      Flying
+714      Flying
+715       Fairy
+716        Dark
+717      Dragon
+718        Rock
+719     Psychic
+720        Fire
+Name: Pokemon, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[264]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon_names</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;pokemon.csv&quot;</span><span class="p">,</span> <span class="n">usecols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Pokemon&quot;</span><span class="p">],</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">pokemon_types</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;pokemon.csv&quot;</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="s2">&quot;Pokemon&quot;</span><span class="p">,</span> <span class="n">squeeze</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[265]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon_names</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[265]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0     Bulbasaur
+1       Ivysaur
+2      Venusaur
+3    Charmander
+4    Charmeleon
+Name: Pokemon, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[266]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon_types</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[266]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;Abomasnow&#39;: &#39;Grass&#39;,
+ &#39;Abra&#39;: &#39;Psychic&#39;,
+ &#39;Absol&#39;: &#39;Dark&#39;,
+ &#39;Accelgor&#39;: &#39;Bug&#39;,
+ &#39;Aegislash&#39;: &#39;Steel&#39;,
+ &#39;Aerodactyl&#39;: &#39;Rock&#39;,
+ &#39;Aggron&#39;: &#39;Steel&#39;,
+ &#39;Aipom&#39;: &#39;Normal&#39;,
+ &#39;Alakazam&#39;: &#39;Psychic&#39;,
+ &#39;Alomomola&#39;: &#39;Water&#39;,
+ &#39;Altaria&#39;: &#39;Dragon&#39;,
+ &#39;Amaura&#39;: &#39;Rock&#39;,
+ &#39;Ambipom&#39;: &#39;Normal&#39;,
+ &#39;Amoonguss&#39;: &#39;Grass&#39;,
+ &#39;Ampharos&#39;: &#39;Electric&#39;,
+ &#39;Anorith&#39;: &#39;Rock&#39;,
+ &#39;Arbok&#39;: &#39;Poison&#39;,
+ &#39;Arcanine&#39;: &#39;Fire&#39;,
+ &#39;Arceus&#39;: &#39;Normal&#39;,
+ &#39;Archen&#39;: &#39;Rock&#39;,
+ &#39;Archeops&#39;: &#39;Rock&#39;,
+ &#39;Ariados&#39;: &#39;Bug&#39;,
+ &#39;Armaldo&#39;: &#39;Rock&#39;,
+ &#39;Aromatisse&#39;: &#39;Fairy&#39;,
+ &#39;Aron&#39;: &#39;Steel&#39;,
+ &#39;Articuno&#39;: &#39;Ice&#39;,
+ &#39;Audino&#39;: &#39;Normal&#39;,
+ &#39;Aurorus&#39;: &#39;Rock&#39;,
+ &#39;Avalugg&#39;: &#39;Ice&#39;,
+ &#39;Axew&#39;: &#39;Dragon&#39;,
+ &#39;Azelf&#39;: &#39;Psychic&#39;,
+ &#39;Azumarill&#39;: &#39;Water&#39;,
+ &#39;Azurill&#39;: &#39;Normal&#39;,
+ &#39;Bagon&#39;: &#39;Dragon&#39;,
+ &#39;Baltoy&#39;: &#39;Ground&#39;,
+ &#39;Banette&#39;: &#39;Ghost&#39;,
+ &#39;Barbaracle&#39;: &#39;Rock&#39;,
+ &#39;Barboach&#39;: &#39;Water&#39;,
+ &#39;Basculin&#39;: &#39;Water&#39;,
+ &#39;Bastiodon&#39;: &#39;Rock&#39;,
+ &#39;Bayleef&#39;: &#39;Grass&#39;,
+ &#39;Beartic&#39;: &#39;Ice&#39;,
+ &#39;Beautifly&#39;: &#39;Bug&#39;,
+ &#39;Beedrill&#39;: &#39;Bug&#39;,
+ &#39;Beheeyem&#39;: &#39;Psychic&#39;,
+ &#39;Beldum&#39;: &#39;Steel&#39;,
+ &#39;Bellossom&#39;: &#39;Grass&#39;,
+ &#39;Bellsprout&#39;: &#39;Grass&#39;,
+ &#39;Bergmite&#39;: &#39;Ice&#39;,
+ &#39;Bibarel&#39;: &#39;Normal&#39;,
+ &#39;Bidoof&#39;: &#39;Normal&#39;,
+ &#39;Binacle&#39;: &#39;Rock&#39;,
+ &#39;Bisharp&#39;: &#39;Dark&#39;,
+ &#39;Blastoise&#39;: &#39;Water&#39;,
+ &#39;Blaziken&#39;: &#39;Fire&#39;,
+ &#39;Blissey&#39;: &#39;Normal&#39;,
+ &#39;Blitzle&#39;: &#39;Electric&#39;,
+ &#39;Boldore&#39;: &#39;Rock&#39;,
+ &#39;Bonsly&#39;: &#39;Rock&#39;,
+ &#39;Bouffalant&#39;: &#39;Normal&#39;,
+ &#39;Braixen&#39;: &#39;Fire&#39;,
+ &#39;Braviary&#39;: &#39;Normal&#39;,
+ &#39;Breloom&#39;: &#39;Grass&#39;,
+ &#39;Bronzong&#39;: &#39;Steel&#39;,
+ &#39;Bronzor&#39;: &#39;Steel&#39;,
+ &#39;Budew&#39;: &#39;Grass&#39;,
+ &#39;Buizel&#39;: &#39;Water&#39;,
+ &#39;Bulbasaur&#39;: &#39;Grass&#39;,
+ &#39;Buneary&#39;: &#39;Normal&#39;,
+ &#39;Bunnelby&#39;: &#39;Normal&#39;,
+ &#39;Burmy&#39;: &#39;Bug&#39;,
+ &#39;Butterfree&#39;: &#39;Bug&#39;,
+ &#39;Cacnea&#39;: &#39;Grass&#39;,
+ &#39;Cacturne&#39;: &#39;Grass&#39;,
+ &#39;Camerupt&#39;: &#39;Fire&#39;,
+ &#39;Carbink&#39;: &#39;Rock&#39;,
+ &#39;Carnivine&#39;: &#39;Grass&#39;,
+ &#39;Carracosta&#39;: &#39;Water&#39;,
+ &#39;Carvanha&#39;: &#39;Water&#39;,
+ &#39;Cascoon&#39;: &#39;Bug&#39;,
+ &#39;Castform&#39;: &#39;Normal&#39;,
+ &#39;Caterpie&#39;: &#39;Bug&#39;,
+ &#39;Celebi&#39;: &#39;Psychic&#39;,
+ &#39;Chandelure&#39;: &#39;Ghost&#39;,
+ &#39;Chansey&#39;: &#39;Normal&#39;,
+ &#39;Charizard&#39;: &#39;Fire&#39;,
+ &#39;Charmander&#39;: &#39;Fire&#39;,
+ &#39;Charmeleon&#39;: &#39;Fire&#39;,
+ &#39;Chatot&#39;: &#39;Normal&#39;,
+ &#39;Cherrim&#39;: &#39;Grass&#39;,
+ &#39;Cherubi&#39;: &#39;Grass&#39;,
+ &#39;Chesnaught&#39;: &#39;Grass&#39;,
+ &#39;Chespin&#39;: &#39;Grass&#39;,
+ &#39;Chikorita&#39;: &#39;Grass&#39;,
+ &#39;Chimchar&#39;: &#39;Fire&#39;,
+ &#39;Chimecho&#39;: &#39;Psychic&#39;,
+ &#39;Chinchou&#39;: &#39;Water&#39;,
+ &#39;Chingling&#39;: &#39;Psychic&#39;,
+ &#39;Cinccino&#39;: &#39;Normal&#39;,
+ &#39;Clamperl&#39;: &#39;Water&#39;,
+ &#39;Clauncher&#39;: &#39;Water&#39;,
+ &#39;Clawitzer&#39;: &#39;Water&#39;,
+ &#39;Claydol&#39;: &#39;Ground&#39;,
+ &#39;Clefable&#39;: &#39;Fairy&#39;,
+ &#39;Clefairy&#39;: &#39;Fairy&#39;,
+ &#39;Cleffa&#39;: &#39;Fairy&#39;,
+ &#39;Cloyster&#39;: &#39;Water&#39;,
+ &#39;Cobalion&#39;: &#39;Steel&#39;,
+ &#39;Cofagrigus&#39;: &#39;Ghost&#39;,
+ &#39;Combee&#39;: &#39;Bug&#39;,
+ &#39;Combusken&#39;: &#39;Fire&#39;,
+ &#39;Conkeldurr&#39;: &#39;Fighting&#39;,
+ &#39;Corphish&#39;: &#39;Water&#39;,
+ &#39;Corsola&#39;: &#39;Water&#39;,
+ &#39;Cottonee&#39;: &#39;Grass&#39;,
+ &#39;Cradily&#39;: &#39;Rock&#39;,
+ &#39;Cranidos&#39;: &#39;Rock&#39;,
+ &#39;Crawdaunt&#39;: &#39;Water&#39;,
+ &#39;Cresselia&#39;: &#39;Psychic&#39;,
+ &#39;Croagunk&#39;: &#39;Poison&#39;,
+ &#39;Crobat&#39;: &#39;Poison&#39;,
+ &#39;Croconaw&#39;: &#39;Water&#39;,
+ &#39;Crustle&#39;: &#39;Bug&#39;,
+ &#39;Cryogonal&#39;: &#39;Ice&#39;,
+ &#39;Cubchoo&#39;: &#39;Ice&#39;,
+ &#39;Cubone&#39;: &#39;Ground&#39;,
+ &#39;Cyndaquil&#39;: &#39;Fire&#39;,
+ &#39;Darkrai&#39;: &#39;Dark&#39;,
+ &#39;Darmanitan&#39;: &#39;Fire&#39;,
+ &#39;Darumaka&#39;: &#39;Fire&#39;,
+ &#39;Dedenne&#39;: &#39;Electric&#39;,
+ &#39;Deerling&#39;: &#39;Normal&#39;,
+ &#39;Deino&#39;: &#39;Dark&#39;,
+ &#39;Delcatty&#39;: &#39;Normal&#39;,
+ &#39;Delibird&#39;: &#39;Ice&#39;,
+ &#39;Delphox&#39;: &#39;Fire&#39;,
+ &#39;Deoxys&#39;: &#39;Psychic&#39;,
+ &#39;Dewgong&#39;: &#39;Water&#39;,
+ &#39;Dewott&#39;: &#39;Water&#39;,
+ &#39;Dialga&#39;: &#39;Steel&#39;,
+ &#39;Diancie&#39;: &#39;Rock&#39;,
+ &#39;Diggersby&#39;: &#39;Normal&#39;,
+ &#39;Diglett&#39;: &#39;Ground&#39;,
+ &#39;Ditto&#39;: &#39;Normal&#39;,
+ &#39;Dodrio&#39;: &#39;Normal&#39;,
+ &#39;Doduo&#39;: &#39;Normal&#39;,
+ &#39;Donphan&#39;: &#39;Ground&#39;,
+ &#39;Doublade&#39;: &#39;Steel&#39;,
+ &#39;Dragalge&#39;: &#39;Poison&#39;,
+ &#39;Dragonair&#39;: &#39;Dragon&#39;,
+ &#39;Dragonite&#39;: &#39;Dragon&#39;,
+ &#39;Drapion&#39;: &#39;Poison&#39;,
+ &#39;Dratini&#39;: &#39;Dragon&#39;,
+ &#39;Drifblim&#39;: &#39;Ghost&#39;,
+ &#39;Drifloon&#39;: &#39;Ghost&#39;,
+ &#39;Drilbur&#39;: &#39;Ground&#39;,
+ &#39;Drowzee&#39;: &#39;Psychic&#39;,
+ &#39;Druddigon&#39;: &#39;Dragon&#39;,
+ &#39;Ducklett&#39;: &#39;Water&#39;,
+ &#39;Dugtrio&#39;: &#39;Ground&#39;,
+ &#39;Dunsparce&#39;: &#39;Normal&#39;,
+ &#39;Duosion&#39;: &#39;Psychic&#39;,
+ &#39;Durant&#39;: &#39;Bug&#39;,
+ &#39;Dusclops&#39;: &#39;Ghost&#39;,
+ &#39;Dusknoir&#39;: &#39;Ghost&#39;,
+ &#39;Duskull&#39;: &#39;Ghost&#39;,
+ &#39;Dustox&#39;: &#39;Bug&#39;,
+ &#39;Dwebble&#39;: &#39;Bug&#39;,
+ &#39;Eelektrik&#39;: &#39;Electric&#39;,
+ &#39;Eelektross&#39;: &#39;Electric&#39;,
+ &#39;Eevee&#39;: &#39;Normal&#39;,
+ &#39;Ekans&#39;: &#39;Poison&#39;,
+ &#39;Electabuzz&#39;: &#39;Electric&#39;,
+ &#39;Electivire&#39;: &#39;Electric&#39;,
+ &#39;Electrike&#39;: &#39;Electric&#39;,
+ &#39;Electrode&#39;: &#39;Electric&#39;,
+ &#39;Elekid&#39;: &#39;Electric&#39;,
+ &#39;Elgyem&#39;: &#39;Psychic&#39;,
+ &#39;Emboar&#39;: &#39;Fire&#39;,
+ &#39;Emolga&#39;: &#39;Electric&#39;,
+ &#39;Empoleon&#39;: &#39;Water&#39;,
+ &#39;Entei&#39;: &#39;Fire&#39;,
+ &#39;Escavalier&#39;: &#39;Bug&#39;,
+ &#39;Espeon&#39;: &#39;Psychic&#39;,
+ &#39;Espurr&#39;: &#39;Psychic&#39;,
+ &#39;Excadrill&#39;: &#39;Ground&#39;,
+ &#39;Exeggcute&#39;: &#39;Grass&#39;,
+ &#39;Exeggutor&#39;: &#39;Grass&#39;,
+ &#39;Exploud&#39;: &#39;Normal&#39;,
+ &#34;Farfetch&#39;d&#34;: &#39;Normal&#39;,
+ &#39;Fearow&#39;: &#39;Normal&#39;,
+ &#39;Feebas&#39;: &#39;Water&#39;,
+ &#39;Fennekin&#39;: &#39;Fire&#39;,
+ &#39;Feraligatr&#39;: &#39;Water&#39;,
+ &#39;Ferroseed&#39;: &#39;Grass&#39;,
+ &#39;Ferrothorn&#39;: &#39;Grass&#39;,
+ &#39;Finneon&#39;: &#39;Water&#39;,
+ &#39;Flaaffy&#39;: &#39;Electric&#39;,
+ &#39;Flabébé&#39;: &#39;Fairy&#39;,
+ &#39;Flareon&#39;: &#39;Fire&#39;,
+ &#39;Fletchinder&#39;: &#39;Fire&#39;,
+ &#39;Fletchling&#39;: &#39;Normal&#39;,
+ &#39;Floatzel&#39;: &#39;Water&#39;,
+ &#39;Floette&#39;: &#39;Fairy&#39;,
+ &#39;Florges&#39;: &#39;Fairy&#39;,
+ &#39;Flygon&#39;: &#39;Ground&#39;,
+ &#39;Foongus&#39;: &#39;Grass&#39;,
+ &#39;Forretress&#39;: &#39;Bug&#39;,
+ &#39;Fraxure&#39;: &#39;Dragon&#39;,
+ &#39;Frillish&#39;: &#39;Water&#39;,
+ &#39;Froakie&#39;: &#39;Water&#39;,
+ &#39;Frogadier&#39;: &#39;Water&#39;,
+ &#39;Froslass&#39;: &#39;Ice&#39;,
+ &#39;Furfrou&#39;: &#39;Normal&#39;,
+ &#39;Furret&#39;: &#39;Normal&#39;,
+ &#39;Gabite&#39;: &#39;Dragon&#39;,
+ &#39;Gallade&#39;: &#39;Psychic&#39;,
+ &#39;Galvantula&#39;: &#39;Bug&#39;,
+ &#39;Garbodor&#39;: &#39;Poison&#39;,
+ &#39;Garchomp&#39;: &#39;Dragon&#39;,
+ &#39;Gardevoir&#39;: &#39;Psychic&#39;,
+ &#39;Gastly&#39;: &#39;Ghost&#39;,
+ &#39;Gastrodon&#39;: &#39;Water&#39;,
+ &#39;Genesect&#39;: &#39;Bug&#39;,
+ &#39;Gengar&#39;: &#39;Ghost&#39;,
+ &#39;Geodude&#39;: &#39;Rock&#39;,
+ &#39;Gible&#39;: &#39;Dragon&#39;,
+ &#39;Gigalith&#39;: &#39;Rock&#39;,
+ &#39;Girafarig&#39;: &#39;Normal&#39;,
+ &#39;Giratina&#39;: &#39;Ghost&#39;,
+ &#39;Glaceon&#39;: &#39;Ice&#39;,
+ &#39;Glalie&#39;: &#39;Ice&#39;,
+ &#39;Glameow&#39;: &#39;Normal&#39;,
+ &#39;Gligar&#39;: &#39;Ground&#39;,
+ &#39;Gliscor&#39;: &#39;Ground&#39;,
+ &#39;Gloom&#39;: &#39;Grass&#39;,
+ &#39;Gogoat&#39;: &#39;Grass&#39;,
+ &#39;Golbat&#39;: &#39;Poison&#39;,
+ &#39;Goldeen&#39;: &#39;Water&#39;,
+ &#39;Golduck&#39;: &#39;Water&#39;,
+ &#39;Golem&#39;: &#39;Rock&#39;,
+ &#39;Golett&#39;: &#39;Ground&#39;,
+ &#39;Golurk&#39;: &#39;Ground&#39;,
+ &#39;Goodra&#39;: &#39;Dragon&#39;,
+ &#39;Goomy&#39;: &#39;Dragon&#39;,
+ &#39;Gorebyss&#39;: &#39;Water&#39;,
+ &#39;Gothita&#39;: &#39;Psychic&#39;,
+ &#39;Gothitelle&#39;: &#39;Psychic&#39;,
+ &#39;Gothorita&#39;: &#39;Psychic&#39;,
+ &#39;Gourgeist&#39;: &#39;Ghost&#39;,
+ &#39;Granbull&#39;: &#39;Fairy&#39;,
+ &#39;Graveler&#39;: &#39;Rock&#39;,
+ &#39;Greninja&#39;: &#39;Water&#39;,
+ &#39;Grimer&#39;: &#39;Poison&#39;,
+ &#39;Grotle&#39;: &#39;Grass&#39;,
+ &#39;Groudon&#39;: &#39;Ground&#39;,
+ &#39;Grovyle&#39;: &#39;Grass&#39;,
+ &#39;Growlithe&#39;: &#39;Fire&#39;,
+ &#39;Grumpig&#39;: &#39;Psychic&#39;,
+ &#39;Gulpin&#39;: &#39;Poison&#39;,
+ &#39;Gurdurr&#39;: &#39;Fighting&#39;,
+ &#39;Gyarados&#39;: &#39;Water&#39;,
+ &#39;Happiny&#39;: &#39;Normal&#39;,
+ &#39;Hariyama&#39;: &#39;Fighting&#39;,
+ &#39;Haunter&#39;: &#39;Ghost&#39;,
+ &#39;Hawlucha&#39;: &#39;Fighting&#39;,
+ &#39;Haxorus&#39;: &#39;Dragon&#39;,
+ &#39;Heatmor&#39;: &#39;Fire&#39;,
+ &#39;Heatran&#39;: &#39;Fire&#39;,
+ &#39;Heliolisk&#39;: &#39;Electric&#39;,
+ &#39;Helioptile&#39;: &#39;Electric&#39;,
+ &#39;Heracross&#39;: &#39;Bug&#39;,
+ &#39;Herdier&#39;: &#39;Normal&#39;,
+ &#39;Hippopotas&#39;: &#39;Ground&#39;,
+ &#39;Hippowdon&#39;: &#39;Ground&#39;,
+ &#39;Hitmonchan&#39;: &#39;Fighting&#39;,
+ &#39;Hitmonlee&#39;: &#39;Fighting&#39;,
+ &#39;Hitmontop&#39;: &#39;Fighting&#39;,
+ &#39;Ho-oh&#39;: &#39;Fire&#39;,
+ &#39;Honchkrow&#39;: &#39;Dark&#39;,
+ &#39;Honedge&#39;: &#39;Steel&#39;,
+ &#39;Hoopa&#39;: &#39;Psychic&#39;,
+ &#39;Hoothoot&#39;: &#39;Normal&#39;,
+ &#39;Hoppip&#39;: &#39;Grass&#39;,
+ &#39;Horsea&#39;: &#39;Water&#39;,
+ &#39;Houndoom&#39;: &#39;Dark&#39;,
+ &#39;Houndour&#39;: &#39;Dark&#39;,
+ &#39;Huntail&#39;: &#39;Water&#39;,
+ &#39;Hydreigon&#39;: &#39;Dark&#39;,
+ &#39;Hypno&#39;: &#39;Psychic&#39;,
+ &#39;Igglybuff&#39;: &#39;Normal&#39;,
+ &#39;Illumise&#39;: &#39;Bug&#39;,
+ &#39;Infernape&#39;: &#39;Fire&#39;,
+ &#39;Inkay&#39;: &#39;Dark&#39;,
+ &#39;Ivysaur&#39;: &#39;Grass&#39;,
+ &#39;Jellicent&#39;: &#39;Water&#39;,
+ &#39;Jigglypuff&#39;: &#39;Normal&#39;,
+ &#39;Jirachi&#39;: &#39;Steel&#39;,
+ &#39;Jolteon&#39;: &#39;Electric&#39;,
+ &#39;Joltik&#39;: &#39;Bug&#39;,
+ &#39;Jumpluff&#39;: &#39;Grass&#39;,
+ &#39;Jynx&#39;: &#39;Ice&#39;,
+ &#39;Kabuto&#39;: &#39;Rock&#39;,
+ &#39;Kabutops&#39;: &#39;Rock&#39;,
+ &#39;Kadabra&#39;: &#39;Psychic&#39;,
+ &#39;Kakuna&#39;: &#39;Bug&#39;,
+ &#39;Kangaskhan&#39;: &#39;Normal&#39;,
+ &#39;Karrablast&#39;: &#39;Bug&#39;,
+ &#39;Kecleon&#39;: &#39;Normal&#39;,
+ &#39;Keldeo&#39;: &#39;Water&#39;,
+ &#39;Kingdra&#39;: &#39;Water&#39;,
+ &#39;Kingler&#39;: &#39;Water&#39;,
+ &#39;Kirlia&#39;: &#39;Psychic&#39;,
+ &#39;Klang&#39;: &#39;Steel&#39;,
+ &#39;Klefki&#39;: &#39;Steel&#39;,
+ &#39;Klink&#39;: &#39;Steel&#39;,
+ &#39;Klinklang&#39;: &#39;Steel&#39;,
+ &#39;Koffing&#39;: &#39;Poison&#39;,
+ &#39;Krabby&#39;: &#39;Water&#39;,
+ &#39;Kricketot&#39;: &#39;Bug&#39;,
+ &#39;Kricketune&#39;: &#39;Bug&#39;,
+ &#39;Krokorok&#39;: &#39;Ground&#39;,
+ &#39;Krookodile&#39;: &#39;Ground&#39;,
+ &#39;Kyogre&#39;: &#39;Water&#39;,
+ &#39;Kyurem&#39;: &#39;Dragon&#39;,
+ &#39;Lairon&#39;: &#39;Steel&#39;,
+ &#39;Lampent&#39;: &#39;Ghost&#39;,
+ &#39;Landorus&#39;: &#39;Ground&#39;,
+ &#39;Lanturn&#39;: &#39;Water&#39;,
+ &#39;Lapras&#39;: &#39;Water&#39;,
+ &#39;Larvesta&#39;: &#39;Bug&#39;,
+ &#39;Larvitar&#39;: &#39;Rock&#39;,
+ &#39;Latias&#39;: &#39;Dragon&#39;,
+ &#39;Latios&#39;: &#39;Dragon&#39;,
+ &#39;Leafeon&#39;: &#39;Grass&#39;,
+ &#39;Leavanny&#39;: &#39;Bug&#39;,
+ &#39;Ledian&#39;: &#39;Bug&#39;,
+ &#39;Ledyba&#39;: &#39;Bug&#39;,
+ &#39;Lickilicky&#39;: &#39;Normal&#39;,
+ &#39;Lickitung&#39;: &#39;Normal&#39;,
+ &#39;Liepard&#39;: &#39;Dark&#39;,
+ &#39;Lileep&#39;: &#39;Rock&#39;,
+ &#39;Lilligant&#39;: &#39;Grass&#39;,
+ &#39;Lillipup&#39;: &#39;Normal&#39;,
+ &#39;Linoone&#39;: &#39;Normal&#39;,
+ &#39;Litleo&#39;: &#39;Fire&#39;,
+ &#39;Litwick&#39;: &#39;Ghost&#39;,
+ &#39;Lombre&#39;: &#39;Water&#39;,
+ &#39;Lopunny&#39;: &#39;Normal&#39;,
+ &#39;Lotad&#39;: &#39;Water&#39;,
+ &#39;Loudred&#39;: &#39;Normal&#39;,
+ &#39;Lucario&#39;: &#39;Fighting&#39;,
+ &#39;Ludicolo&#39;: &#39;Water&#39;,
+ &#39;Lugia&#39;: &#39;Psychic&#39;,
+ &#39;Lumineon&#39;: &#39;Water&#39;,
+ &#39;Lunatone&#39;: &#39;Rock&#39;,
+ &#39;Luvdisc&#39;: &#39;Water&#39;,
+ &#39;Luxio&#39;: &#39;Electric&#39;,
+ &#39;Luxray&#39;: &#39;Electric&#39;,
+ &#39;Machamp&#39;: &#39;Fighting&#39;,
+ &#39;Machoke&#39;: &#39;Fighting&#39;,
+ &#39;Machop&#39;: &#39;Fighting&#39;,
+ &#39;Magby&#39;: &#39;Fire&#39;,
+ &#39;Magcargo&#39;: &#39;Fire&#39;,
+ &#39;Magikarp&#39;: &#39;Water&#39;,
+ &#39;Magmar&#39;: &#39;Fire&#39;,
+ &#39;Magmortar&#39;: &#39;Fire&#39;,
+ &#39;Magnemite&#39;: &#39;Electric&#39;,
+ &#39;Magneton&#39;: &#39;Electric&#39;,
+ &#39;Magnezone&#39;: &#39;Electric&#39;,
+ &#39;Makuhita&#39;: &#39;Fighting&#39;,
+ &#39;Malamar&#39;: &#39;Dark&#39;,
+ &#39;Mamoswine&#39;: &#39;Ice&#39;,
+ &#39;Manaphy&#39;: &#39;Water&#39;,
+ &#39;Mandibuzz&#39;: &#39;Dark&#39;,
+ &#39;Manectric&#39;: &#39;Electric&#39;,
+ &#39;Mankey&#39;: &#39;Fighting&#39;,
+ &#39;Mantine&#39;: &#39;Water&#39;,
+ &#39;Mantyke&#39;: &#39;Water&#39;,
+ &#39;Maractus&#39;: &#39;Grass&#39;,
+ &#39;Mareep&#39;: &#39;Electric&#39;,
+ &#39;Marill&#39;: &#39;Water&#39;,
+ &#39;Marowak&#39;: &#39;Ground&#39;,
+ &#39;Marshtomp&#39;: &#39;Water&#39;,
+ &#39;Masquerain&#39;: &#39;Bug&#39;,
+ &#39;Mawile&#39;: &#39;Steel&#39;,
+ &#39;Medicham&#39;: &#39;Fighting&#39;,
+ &#39;Meditite&#39;: &#39;Fighting&#39;,
+ &#39;Meganium&#39;: &#39;Grass&#39;,
+ &#39;Meloetta&#39;: &#39;Normal&#39;,
+ &#39;Meowstic&#39;: &#39;Psychic&#39;,
+ &#39;Meowth&#39;: &#39;Normal&#39;,
+ &#39;Mesprit&#39;: &#39;Psychic&#39;,
+ &#39;Metagross&#39;: &#39;Steel&#39;,
+ &#39;Metang&#39;: &#39;Steel&#39;,
+ &#39;Metapod&#39;: &#39;Bug&#39;,
+ &#39;Mew&#39;: &#39;Psychic&#39;,
+ &#39;Mewtwo&#39;: &#39;Psychic&#39;,
+ &#39;Mienfoo&#39;: &#39;Fighting&#39;,
+ &#39;Mienshao&#39;: &#39;Fighting&#39;,
+ &#39;Mightyena&#39;: &#39;Dark&#39;,
+ &#39;Milotic&#39;: &#39;Water&#39;,
+ &#39;Miltank&#39;: &#39;Normal&#39;,
+ &#39;Mime Jr.&#39;: &#39;Psychic&#39;,
+ &#39;Minccino&#39;: &#39;Normal&#39;,
+ &#39;Minun&#39;: &#39;Electric&#39;,
+ &#39;Misdreavus&#39;: &#39;Ghost&#39;,
+ &#39;Mismagius&#39;: &#39;Ghost&#39;,
+ &#39;Moltres&#39;: &#39;Fire&#39;,
+ &#39;Monferno&#39;: &#39;Fire&#39;,
+ &#39;Mothim&#39;: &#39;Bug&#39;,
+ &#39;Mr. Mime&#39;: &#39;Psychic&#39;,
+ &#39;Mudkip&#39;: &#39;Water&#39;,
+ &#39;Muk&#39;: &#39;Poison&#39;,
+ &#39;Munchlax&#39;: &#39;Normal&#39;,
+ &#39;Munna&#39;: &#39;Psychic&#39;,
+ &#39;Murkrow&#39;: &#39;Dark&#39;,
+ &#39;Musharna&#39;: &#39;Psychic&#39;,
+ &#39;Natu&#39;: &#39;Psychic&#39;,
+ &#39;Nidoking&#39;: &#39;Poison&#39;,
+ &#39;Nidoqueen&#39;: &#39;Poison&#39;,
+ &#39;Nidoran&#39;: &#39;Poison&#39;,
+ &#39;Nidoran♂&#39;: &#39;Poison&#39;,
+ &#39;Nidorina&#39;: &#39;Poison&#39;,
+ &#39;Nidorino&#39;: &#39;Poison&#39;,
+ &#39;Nincada&#39;: &#39;Bug&#39;,
+ &#39;Ninetales&#39;: &#39;Fire&#39;,
+ &#39;Ninjask&#39;: &#39;Bug&#39;,
+ &#39;Noctowl&#39;: &#39;Normal&#39;,
+ &#39;Noibat&#39;: &#39;Flying&#39;,
+ &#39;Noivern&#39;: &#39;Flying&#39;,
+ &#39;Nosepass&#39;: &#39;Rock&#39;,
+ &#39;Numel&#39;: &#39;Fire&#39;,
+ &#39;Nuzleaf&#39;: &#39;Grass&#39;,
+ &#39;Octillery&#39;: &#39;Water&#39;,
+ &#39;Oddish&#39;: &#39;Grass&#39;,
+ &#39;Omanyte&#39;: &#39;Rock&#39;,
+ &#39;Omastar&#39;: &#39;Rock&#39;,
+ &#39;Onix&#39;: &#39;Rock&#39;,
+ &#39;Oshawott&#39;: &#39;Water&#39;,
+ &#39;Pachirisu&#39;: &#39;Electric&#39;,
+ &#39;Palkia&#39;: &#39;Water&#39;,
+ &#39;Palpitoad&#39;: &#39;Water&#39;,
+ &#39;Pancham&#39;: &#39;Fighting&#39;,
+ &#39;Pangoro&#39;: &#39;Fighting&#39;,
+ &#39;Panpour&#39;: &#39;Water&#39;,
+ &#39;Pansage&#39;: &#39;Grass&#39;,
+ &#39;Pansear&#39;: &#39;Fire&#39;,
+ &#39;Paras&#39;: &#39;Bug&#39;,
+ &#39;Parasect&#39;: &#39;Bug&#39;,
+ &#39;Patrat&#39;: &#39;Normal&#39;,
+ &#39;Pawniard&#39;: &#39;Dark&#39;,
+ &#39;Pelipper&#39;: &#39;Water&#39;,
+ &#39;Persian&#39;: &#39;Normal&#39;,
+ &#39;Petilil&#39;: &#39;Grass&#39;,
+ &#39;Phanpy&#39;: &#39;Ground&#39;,
+ &#39;Phantump&#39;: &#39;Ghost&#39;,
+ &#39;Phione&#39;: &#39;Water&#39;,
+ &#39;Pichu&#39;: &#39;Electric&#39;,
+ &#39;Pidgeot&#39;: &#39;Normal&#39;,
+ &#39;Pidgeotto&#39;: &#39;Normal&#39;,
+ &#39;Pidgey&#39;: &#39;Normal&#39;,
+ &#39;Pidove&#39;: &#39;Normal&#39;,
+ &#39;Pignite&#39;: &#39;Fire&#39;,
+ &#39;Pikachu&#39;: &#39;Electric&#39;,
+ &#39;Piloswine&#39;: &#39;Ice&#39;,
+ &#39;Pineco&#39;: &#39;Bug&#39;,
+ &#39;Pinsir&#39;: &#39;Bug&#39;,
+ &#39;Piplup&#39;: &#39;Water&#39;,
+ &#39;Plusle&#39;: &#39;Electric&#39;,
+ &#39;Politoed&#39;: &#39;Water&#39;,
+ &#39;Poliwag&#39;: &#39;Water&#39;,
+ &#39;Poliwhirl&#39;: &#39;Water&#39;,
+ &#39;Poliwrath&#39;: &#39;Water&#39;,
+ &#39;Ponyta&#39;: &#39;Fire&#39;,
+ &#39;Poochyena&#39;: &#39;Dark&#39;,
+ &#39;Porygon&#39;: &#39;Normal&#39;,
+ &#39;Porygon-Z&#39;: &#39;Normal&#39;,
+ &#39;Porygon2&#39;: &#39;Normal&#39;,
+ &#39;Primeape&#39;: &#39;Fighting&#39;,
+ &#39;Prinplup&#39;: &#39;Water&#39;,
+ &#39;Probopass&#39;: &#39;Rock&#39;,
+ &#39;Psyduck&#39;: &#39;Water&#39;,
+ &#39;Pumpkaboo&#39;: &#39;Ghost&#39;,
+ &#39;Pupitar&#39;: &#39;Rock&#39;,
+ &#39;Purrloin&#39;: &#39;Dark&#39;,
+ &#39;Purugly&#39;: &#39;Normal&#39;,
+ &#39;Pyroar&#39;: &#39;Fire&#39;,
+ &#39;Quagsire&#39;: &#39;Water&#39;,
+ &#39;Quilava&#39;: &#39;Fire&#39;,
+ &#39;Quilladin&#39;: &#39;Grass&#39;,
+ &#39;Qwilfish&#39;: &#39;Water&#39;,
+ &#39;Raichu&#39;: &#39;Electric&#39;,
+ &#39;Raikou&#39;: &#39;Electric&#39;,
+ &#39;Ralts&#39;: &#39;Psychic&#39;,
+ &#39;Rampardos&#39;: &#39;Rock&#39;,
+ &#39;Rapidash&#39;: &#39;Fire&#39;,
+ &#39;Raticate&#39;: &#39;Normal&#39;,
+ &#39;Rattata&#39;: &#39;Normal&#39;,
+ &#39;Rayquaza&#39;: &#39;Dragon&#39;,
+ &#39;Regice&#39;: &#39;Ice&#39;,
+ &#39;Regigigas&#39;: &#39;Normal&#39;,
+ &#39;Regirock&#39;: &#39;Rock&#39;,
+ &#39;Registeel&#39;: &#39;Steel&#39;,
+ &#39;Relicanth&#39;: &#39;Water&#39;,
+ &#39;Remoraid&#39;: &#39;Water&#39;,
+ &#39;Reshiram&#39;: &#39;Dragon&#39;,
+ &#39;Reuniclus&#39;: &#39;Psychic&#39;,
+ &#39;Rhydon&#39;: &#39;Ground&#39;,
+ &#39;Rhyhorn&#39;: &#39;Ground&#39;,
+ &#39;Rhyperior&#39;: &#39;Ground&#39;,
+ &#39;Riolu&#39;: &#39;Fighting&#39;,
+ &#39;Roggenrola&#39;: &#39;Rock&#39;,
+ &#39;Roselia&#39;: &#39;Grass&#39;,
+ &#39;Roserade&#39;: &#39;Grass&#39;,
+ &#39;Rotom&#39;: &#39;Electric&#39;,
+ &#39;Rufflet&#39;: &#39;Normal&#39;,
+ &#39;Sableye&#39;: &#39;Dark&#39;,
+ &#39;Salamence&#39;: &#39;Dragon&#39;,
+ &#39;Samurott&#39;: &#39;Water&#39;,
+ &#39;Sandile&#39;: &#39;Ground&#39;,
+ &#39;Sandshrew&#39;: &#39;Ground&#39;,
+ &#39;Sandslash&#39;: &#39;Ground&#39;,
+ &#39;Sawk&#39;: &#39;Fighting&#39;,
+ &#39;Sawsbuck&#39;: &#39;Normal&#39;,
+ &#39;Scatterbug&#39;: &#39;Bug&#39;,
+ &#39;Sceptile&#39;: &#39;Grass&#39;,
+ &#39;Scizor&#39;: &#39;Bug&#39;,
+ &#39;Scolipede&#39;: &#39;Bug&#39;,
+ &#39;Scrafty&#39;: &#39;Dark&#39;,
+ &#39;Scraggy&#39;: &#39;Dark&#39;,
+ &#39;Scyther&#39;: &#39;Bug&#39;,
+ &#39;Seadra&#39;: &#39;Water&#39;,
+ &#39;Seaking&#39;: &#39;Water&#39;,
+ &#39;Sealeo&#39;: &#39;Ice&#39;,
+ &#39;Seedot&#39;: &#39;Grass&#39;,
+ &#39;Seel&#39;: &#39;Water&#39;,
+ &#39;Seismitoad&#39;: &#39;Water&#39;,
+ &#39;Sentret&#39;: &#39;Normal&#39;,
+ &#39;Serperior&#39;: &#39;Grass&#39;,
+ &#39;Servine&#39;: &#39;Grass&#39;,
+ &#39;Seviper&#39;: &#39;Poison&#39;,
+ &#39;Sewaddle&#39;: &#39;Bug&#39;,
+ &#39;Sharpedo&#39;: &#39;Water&#39;,
+ &#39;Shaymin&#39;: &#39;Grass&#39;,
+ &#39;Shedinja&#39;: &#39;Bug&#39;,
+ &#39;Shelgon&#39;: &#39;Dragon&#39;,
+ &#39;Shellder&#39;: &#39;Water&#39;,
+ &#39;Shellos&#39;: &#39;Water&#39;,
+ &#39;Shelmet&#39;: &#39;Bug&#39;,
+ &#39;Shieldon&#39;: &#39;Rock&#39;,
+ &#39;Shiftry&#39;: &#39;Grass&#39;,
+ &#39;Shinx&#39;: &#39;Electric&#39;,
+ &#39;Shroomish&#39;: &#39;Grass&#39;,
+ &#39;Shuckle&#39;: &#39;Bug&#39;,
+ &#39;Shuppet&#39;: &#39;Ghost&#39;,
+ &#39;Sigilyph&#39;: &#39;Psychic&#39;,
+ &#39;Silcoon&#39;: &#39;Bug&#39;,
+ &#39;Simipour&#39;: &#39;Water&#39;,
+ &#39;Simisage&#39;: &#39;Grass&#39;,
+ &#39;Simisear&#39;: &#39;Fire&#39;,
+ &#39;Skarmory&#39;: &#39;Steel&#39;,
+ &#39;Skiddo&#39;: &#39;Grass&#39;,
+ &#39;Skiploom&#39;: &#39;Grass&#39;,
+ &#39;Skitty&#39;: &#39;Normal&#39;,
+ &#39;Skorupi&#39;: &#39;Poison&#39;,
+ &#39;Skrelp&#39;: &#39;Poison&#39;,
+ &#39;Skuntank&#39;: &#39;Poison&#39;,
+ &#39;Slaking&#39;: &#39;Normal&#39;,
+ &#39;Slakoth&#39;: &#39;Normal&#39;,
+ &#39;Sliggoo&#39;: &#39;Dragon&#39;,
+ &#39;Slowbro&#39;: &#39;Water&#39;,
+ &#39;Slowking&#39;: &#39;Water&#39;,
+ &#39;Slowpoke&#39;: &#39;Water&#39;,
+ &#39;Slugma&#39;: &#39;Fire&#39;,
+ &#39;Slurpuff&#39;: &#39;Fairy&#39;,
+ &#39;Smeargle&#39;: &#39;Normal&#39;,
+ &#39;Smoochum&#39;: &#39;Ice&#39;,
+ &#39;Sneasel&#39;: &#39;Dark&#39;,
+ &#39;Snivy&#39;: &#39;Grass&#39;,
+ &#39;Snorlax&#39;: &#39;Normal&#39;,
+ &#39;Snorunt&#39;: &#39;Ice&#39;,
+ &#39;Snover&#39;: &#39;Grass&#39;,
+ &#39;Snubbull&#39;: &#39;Fairy&#39;,
+ &#39;Solosis&#39;: &#39;Psychic&#39;,
+ &#39;Solrock&#39;: &#39;Rock&#39;,
+ &#39;Spearow&#39;: &#39;Normal&#39;,
+ &#39;Spewpa&#39;: &#39;Bug&#39;,
+ &#39;Spheal&#39;: &#39;Ice&#39;,
+ &#39;Spinarak&#39;: &#39;Bug&#39;,
+ &#39;Spinda&#39;: &#39;Normal&#39;,
+ &#39;Spiritomb&#39;: &#39;Ghost&#39;,
+ &#39;Spoink&#39;: &#39;Psychic&#39;,
+ &#39;Spritzee&#39;: &#39;Fairy&#39;,
+ &#39;Squirtle&#39;: &#39;Water&#39;,
+ &#39;Stantler&#39;: &#39;Normal&#39;,
+ &#39;Staraptor&#39;: &#39;Normal&#39;,
+ &#39;Staravia&#39;: &#39;Normal&#39;,
+ &#39;Starly&#39;: &#39;Normal&#39;,
+ &#39;Starmie&#39;: &#39;Water&#39;,
+ &#39;Staryu&#39;: &#39;Water&#39;,
+ &#39;Steelix&#39;: &#39;Steel&#39;,
+ &#39;Stoutland&#39;: &#39;Normal&#39;,
+ &#39;Stunfisk&#39;: &#39;Ground&#39;,
+ &#39;Stunky&#39;: &#39;Poison&#39;,
+ &#39;Sudowoodo&#39;: &#39;Rock&#39;,
+ &#39;Suicune&#39;: &#39;Water&#39;,
+ &#39;Sunflora&#39;: &#39;Grass&#39;,
+ &#39;Sunkern&#39;: &#39;Grass&#39;,
+ &#39;Surskit&#39;: &#39;Bug&#39;,
+ &#39;Swablu&#39;: &#39;Normal&#39;,
+ &#39;Swadloon&#39;: &#39;Bug&#39;,
+ &#39;Swalot&#39;: &#39;Poison&#39;,
+ &#39;Swampert&#39;: &#39;Water&#39;,
+ &#39;Swanna&#39;: &#39;Water&#39;,
+ &#39;Swellow&#39;: &#39;Normal&#39;,
+ &#39;Swinub&#39;: &#39;Ice&#39;,
+ &#39;Swirlix&#39;: &#39;Fairy&#39;,
+ &#39;Swoobat&#39;: &#39;Psychic&#39;,
+ &#39;Sylveon&#39;: &#39;Fairy&#39;,
+ &#39;Taillow&#39;: &#39;Normal&#39;,
+ &#39;Talonflame&#39;: &#39;Fire&#39;,
+ &#39;Tangela&#39;: &#39;Grass&#39;,
+ &#39;Tangrowth&#39;: &#39;Grass&#39;,
+ &#39;Tauros&#39;: &#39;Normal&#39;,
+ &#39;Teddiursa&#39;: &#39;Normal&#39;,
+ &#39;Tentacool&#39;: &#39;Water&#39;,
+ &#39;Tentacruel&#39;: &#39;Water&#39;,
+ &#39;Tepig&#39;: &#39;Fire&#39;,
+ &#39;Terrakion&#39;: &#39;Rock&#39;,
+ &#39;Throh&#39;: &#39;Fighting&#39;,
+ &#39;Thundurus&#39;: &#39;Electric&#39;,
+ &#39;Timburr&#39;: &#39;Fighting&#39;,
+ &#39;Tirtouga&#39;: &#39;Water&#39;,
+ &#39;Togekiss&#39;: &#39;Fairy&#39;,
+ &#39;Togepi&#39;: &#39;Fairy&#39;,
+ &#39;Togetic&#39;: &#39;Fairy&#39;,
+ &#39;Torchic&#39;: &#39;Fire&#39;,
+ &#39;Torkoal&#39;: &#39;Fire&#39;,
+ &#39;Tornadus&#39;: &#39;Flying&#39;,
+ &#39;Torterra&#39;: &#39;Grass&#39;,
+ &#39;Totodile&#39;: &#39;Water&#39;,
+ &#39;Toxicroak&#39;: &#39;Poison&#39;,
+ &#39;Tranquill&#39;: &#39;Normal&#39;,
+ &#39;Trapinch&#39;: &#39;Ground&#39;,
+ &#39;Treecko&#39;: &#39;Grass&#39;,
+ &#39;Trevenant&#39;: &#39;Ghost&#39;,
+ &#39;Tropius&#39;: &#39;Grass&#39;,
+ &#39;Trubbish&#39;: &#39;Poison&#39;,
+ &#39;Turtwig&#39;: &#39;Grass&#39;,
+ &#39;Tympole&#39;: &#39;Water&#39;,
+ &#39;Tynamo&#39;: &#39;Electric&#39;,
+ &#39;Typhlosion&#39;: &#39;Fire&#39;,
+ &#39;Tyranitar&#39;: &#39;Rock&#39;,
+ &#39;Tyrantrum&#39;: &#39;Rock&#39;,
+ &#39;Tyrogue&#39;: &#39;Fighting&#39;,
+ &#39;Tyrunt&#39;: &#39;Rock&#39;,
+ &#39;Umbreon&#39;: &#39;Dark&#39;,
+ &#39;Unfezant&#39;: &#39;Normal&#39;,
+ &#39;Unown&#39;: &#39;Psychic&#39;,
+ &#39;Ursaring&#39;: &#39;Normal&#39;,
+ &#39;Uxie&#39;: &#39;Psychic&#39;,
+ &#39;Vanillish&#39;: &#39;Ice&#39;,
+ &#39;Vanillite&#39;: &#39;Ice&#39;,
+ &#39;Vanilluxe&#39;: &#39;Ice&#39;,
+ &#39;Vaporeon&#39;: &#39;Water&#39;,
+ &#39;Venipede&#39;: &#39;Bug&#39;,
+ &#39;Venomoth&#39;: &#39;Bug&#39;,
+ &#39;Venonat&#39;: &#39;Bug&#39;,
+ &#39;Venusaur&#39;: &#39;Grass&#39;,
+ &#39;Vespiquen&#39;: &#39;Bug&#39;,
+ &#39;Vibrava&#39;: &#39;Ground&#39;,
+ &#39;Victini&#39;: &#39;Psychic&#39;,
+ &#39;Victreebel&#39;: &#39;Grass&#39;,
+ &#39;Vigoroth&#39;: &#39;Normal&#39;,
+ &#39;Vileplume&#39;: &#39;Grass&#39;,
+ &#39;Virizion&#39;: &#39;Grass&#39;,
+ &#39;Vivillon&#39;: &#39;Bug&#39;,
+ &#39;Volbeat&#39;: &#39;Bug&#39;,
+ &#39;Volcanion&#39;: &#39;Fire&#39;,
+ &#39;Volcarona&#39;: &#39;Bug&#39;,
+ &#39;Voltorb&#39;: &#39;Electric&#39;,
+ &#39;Vullaby&#39;: &#39;Dark&#39;,
+ &#39;Vulpix&#39;: &#39;Fire&#39;,
+ &#39;Wailmer&#39;: &#39;Water&#39;,
+ &#39;Wailord&#39;: &#39;Water&#39;,
+ &#39;Walrein&#39;: &#39;Ice&#39;,
+ &#39;Wartortle&#39;: &#39;Water&#39;,
+ &#39;Watchog&#39;: &#39;Normal&#39;,
+ &#39;Weavile&#39;: &#39;Dark&#39;,
+ &#39;Weedle&#39;: &#39;Bug&#39;,
+ &#39;Weepinbell&#39;: &#39;Grass&#39;,
+ &#39;Weezing&#39;: &#39;Poison&#39;,
+ &#39;Whimsicott&#39;: &#39;Grass&#39;,
+ &#39;Whirlipede&#39;: &#39;Bug&#39;,
+ &#39;Whiscash&#39;: &#39;Water&#39;,
+ &#39;Whismur&#39;: &#39;Normal&#39;,
+ &#39;Wigglytuff&#39;: &#39;Normal&#39;,
+ &#39;Wingull&#39;: &#39;Water&#39;,
+ &#39;Wobbuffet&#39;: &#39;Psychic&#39;,
+ &#39;Woobat&#39;: &#39;Psychic&#39;,
+ &#39;Wooper&#39;: &#39;Water&#39;,
+ &#39;Wormadam&#39;: &#39;Bug&#39;,
+ &#39;Wurmple&#39;: &#39;Bug&#39;,
+ &#39;Wynaut&#39;: &#39;Psychic&#39;,
+ &#39;Xatu&#39;: &#39;Psychic&#39;,
+ &#39;Xerneas&#39;: &#39;Fairy&#39;,
+ &#39;Yamask&#39;: &#39;Ghost&#39;,
+ &#39;Yanma&#39;: &#39;Bug&#39;,
+ &#39;Yanmega&#39;: &#39;Bug&#39;,
+ &#39;Yveltal&#39;: &#39;Dark&#39;,
+ &#39;Zangoose&#39;: &#39;Normal&#39;,
+ &#39;Zapdos&#39;: &#39;Electric&#39;,
+ &#39;Zebstrika&#39;: &#39;Electric&#39;,
+ &#39;Zekrom&#39;: &#39;Dragon&#39;,
+ &#39;Zigzagoon&#39;: &#39;Normal&#39;,
+ &#39;Zoroark&#39;: &#39;Dark&#39;,
+ &#39;Zorua&#39;: &#39;Dark&#39;,
+ &#39;Zubat&#39;: &#39;Poison&#39;,
+ &#39;Zweilous&#39;: &#39;Dark&#39;,
+ &#39;Zygarde&#39;: &#39;Dragon&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[267]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pokemon_names</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">pokemon_types</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[267]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0         Grass
+1         Grass
+2         Grass
+3          Fire
+4          Fire
+5          Fire
+6         Water
+7         Water
+8         Water
+9           Bug
+10          Bug
+11          Bug
+12          Bug
+13          Bug
+14          Bug
+15       Normal
+16       Normal
+17       Normal
+18       Normal
+19       Normal
+20       Normal
+21       Normal
+22       Poison
+23       Poison
+24     Electric
+25     Electric
+26       Ground
+27       Ground
+28       Poison
+29       Poison
+         ...   
+691       Water
+692       Water
+693    Electric
+694    Electric
+695        Rock
+696        Rock
+697        Rock
+698        Rock
+699       Fairy
+700    Fighting
+701    Electric
+702        Rock
+703      Dragon
+704      Dragon
+705      Dragon
+706       Steel
+707       Ghost
+708       Ghost
+709       Ghost
+710       Ghost
+711         Ice
+712         Ice
+713      Flying
+714      Flying
+715       Fairy
+716        Dark
+717      Dragon
+718        Rock
+719     Psychic
+720        Fire
+Name: Pokemon, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+
