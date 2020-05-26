@@ -1,3 +1,6 @@
+.markdown-toc{
+
+}
 .sidebar {
     clear:both
    }
@@ -78,7 +81,8 @@
      position:-webkit-sticky;
      position:sticky;
      top:2em;
-     float:right
+     float:right;
+     margin-top:-20%;
     }
     .sidebar__right.sticky::after {
      clear:both;

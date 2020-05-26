@@ -16,19 +16,9 @@ func main() {
  fmt.Println("Hello World")
 }
 ```
-
-<aside class="sidebar__right sticky">
-    <nav class="toc">
-      <header>
-        <h4 class="nav__title"><!-- <i class="fas fa-cog"></i> -->
-         Table of Contents</h4>
-      </header>
-
   * Do not remove this line (it will not be displayed)
+  {:class="sidebar__right sticky toc"}
 {:toc}
-
-  </nav>
-</aside>
 
 <p><button class="btn js-toggle-dark-mode">Preview dark color scheme</button></p>
 <script type="text/javascript" src="https://pmarsceill.github.io/just-the-docs/assets/js/dark-mode-preview.js"></script>

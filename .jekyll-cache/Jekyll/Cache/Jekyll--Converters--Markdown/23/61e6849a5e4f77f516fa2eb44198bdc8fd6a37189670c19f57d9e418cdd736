@@ -1,0 +1,167 @@
+I"2#<h1 id="introduction-to-go">Introduction to Go</h1>
+
+<h3 id="about-the-tutorial">About the Tutorial</h3>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+<span class="k">import</span> <span class="s">"fmt"</span>
+<span class="c">// this is a comment</span>
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+ <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"Hello World"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<ul id="markdown-toc">
+  <li><a href="#introduction-to-go" id="markdown-toc-introduction-to-go">Introduction to Go</a>    <ul>
+      <li><a href="#about-the-tutorial" id="markdown-toc-about-the-tutorial">About the Tutorial</a></li>
+      <li><a href="#what-is-go" id="markdown-toc-what-is-go">What is Go?</a></li>
+      <li><a href="#why-go" id="markdown-toc-why-go">Why Go?</a>        <ul>
+          <li><a href="#the-core-capability-of-golang" id="markdown-toc-the-core-capability-of-golang">The Core Capability of GoLang:</a></li>
+        </ul>
+      </li>
+      <li><a href="#getting-up-and-running-in-go" id="markdown-toc-getting-up-and-running-in-go">Getting up and running in Go</a></li>
+      <li><a href="#installing-go" id="markdown-toc-installing-go">Installing Go</a>        <ul>
+          <li><a href="#system-requirements" id="markdown-toc-system-requirements">System Requirements</a></li>
+          <li><a href="#checking-golang-version" id="markdown-toc-checking-golang-version">Checking GoLang version</a></li>
+        </ul>
+      </li>
+      <li><a href="#your-first-program-in-go" id="markdown-toc-your-first-program-in-go">Your First Program in Go</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p><button class="btn js-toggle-dark-mode">Preview dark color scheme</button></p>
+<script type="text/javascript" src="https://pmarsceill.github.io/just-the-docs/assets/js/dark-mode-preview.js"></script>
+
+<h3 id="what-is-go">What is Go?</h3>
+
+<p><strong>Go</strong> is a statically typed], compiled programming language at Google by Robert Griesemer, Rob Pike, and Ken Thompson. Go is syntactically similar to C, but with memory safety, garbage collection, structural typing, and CSP-style concurrency. The language is often referred to as “Golang” because of its domain name, <code class="highlighter-rouge">golang.org</code>, but the proper name is Go.</p>
+
+<p>So, okay… let’s go on to a more of realistic view ie., where <code class="highlighter-rouge">golang</code> is used?</p>
+
+<p>Go can be used in</p>
+
+<ul>
+  <li><strong>OS Kernel and Firmware Development</strong></li>
+  <li><strong>Desktop UI Development</strong></li>
+  <li><strong>Web Frontend</strong></li>
+  <li><strong>Mobile App Development</strong></li>
+</ul>
+
+<p>and many other industry level developments. Also do have a note that, <strong>Go</strong> is still in initial stages and is capable of doing miracles, once it’s fully developed in a Big Picture.</p>
+
+<blockquote>
+  <p>Go language is the C for the twenty-first century when it comes to syntax.</p>
+</blockquote>
+
+<h3 id="why-go">Why Go?</h3>
+
+<p>The developers are always in search of an easier, more sophisticated and more project-friendly language that meet their needs. <a href="https://golang.org/">GoLang</a> came as such as astounding new programming language with a full pack of solutions. Ever since it arrived, GoLang took the entire programming world by surprise.</p>
+
+<h4 id="the-core-capability-of-golang">The Core Capability of GoLang:</h4>
+
+<ul>
+  <li>Fast-paving compilation and execution</li>
+  <li>Do away with the need of working with different subsets of languages for one project.</li>
+  <li>A boost to code readability and documentation</li>
+  <li>Offering a thoroughly consistent language</li>
+  <li>Facilitating easy versioning of the program</li>
+</ul>
+
+<p>This is just the first phase of GoLang and there are many other capabilities like</p>
+
+<ul>
+  <li>Allowing developing with multiple languages</li>
+  <li>Allowing easier maintenance of dependencies</li>
+  <li>Simplicity of Go
+    <ul>
+      <li>No Generics</li>
+      <li>Single Executable</li>
+      <li>No Dynamic Libraries</li>
+    </ul>
+  </li>
+  <li>Inbuilt Framework for Testing and Profiling</li>
+</ul>
+
+<p>GoLang came as a massive value addition to the programming of complex applications underlying performance-savvy hardware systems and large scalable enterprise software systems. No wonder, within a few years it received such a vast following from developers around the globe.</p>
+
+<p><img src=".\go-layers.jpg" alt="image-20200521174531344" /></p>
+
+<h3 id="getting-up-and-running-in-go">Getting up and running in Go</h3>
+
+<p>You have a few options for getting into Go, depending on your level of commitment.</p>
+
+<p>The easiest way to get started with Go is through a tour at <a href="http://tour.golang.org">http://tour.golang.org</a>, which walks you through using some of its main features. What separates the Go tour from this tutorials is in how the examples work. You can execute the examples right in your browser. If you want to change them and execute your changes, you can do that as well.</p>
+
+<p>If you want to try executing simple Go applications, you can do that through the Go Playground at <a href="https://play.golang.org">https://play.golang.org</a>. The Go Playground is what enables the tour examples to be executable. Here you can test code and share a link to it. The examples in this tutorial that represent a program can be executed in the Playground.</p>
+
+<p><strong>If you are more committed to learn <code class="highlighter-rouge">golang</code>, we recommend to install Go on your local machine to work seamlessly.</strong></p>
+
+<h3 id="installing-go">Installing Go</h3>
+
+<p>Installing Go is a fairly straightforward process.</p>
+
+<ul>
+  <li>Go to the official <strong>Go Programming Language</strong> <a href="https://golang.org/dl/">Downloads Page</a>.</li>
+  <li>You can take a look at all the available platforms that Go is working on.</li>
+  <li>Then download GoLang for the platform you’re having ie., Windows, MacOS and Linux.</li>
+  <li>After downloading, you can install Go similar to any other software you install on your computer.</li>
+</ul>
+
+<h4 id="system-requirements">System Requirements</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Operating System</strong></th>
+      <th><strong>Architecture</strong></th>
+      <th><strong>Notes</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>FreeBSD 10.3 or later</td>
+      <td>amd64, 386</td>
+      <td>Debian GNU/kFreeBSD not supported</td>
+    </tr>
+    <tr>
+      <td>Linux 2.6.23 or later with glibc</td>
+      <td>amd64, 386, arm, arm64,<br />s390x, ppc64le</td>
+      <td>CentOS/RHEL 5.x not supported.<br />Install from source for other libc.</td>
+    </tr>
+    <tr>
+      <td>macOS 10.11 or later</td>
+      <td>amd64</td>
+      <td>use the clang or gcc that comes with Xcode for <code class="highlighter-rouge">cgo</code> support</td>
+    </tr>
+    <tr>
+      <td>Windows 7, Server 2008R2 or later</td>
+      <td>amd64, 386</td>
+      <td>use MinGW (<code class="highlighter-rouge">386</code>) or MinGW-W64 (<code class="highlighter-rouge">amd64</code>) gcc.<br />No need for cygwin or msys.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>We recommend to go with the latest version of Go Programming Language.</strong></p>
+
+<p>Using the latest version makes your learning more flawless without any bugs and errors in the language.</p>
+
+<h4 id="checking-golang-version">Checking GoLang version</h4>
+
+<p>To know the version of <strong>Go</strong> installed in your machine use thecommand <code class="highlighter-rouge">go version</code> in Command Prompt for Windows and Terminal for Linux and MacOS.</p>
+
+<p><img src="./go-version.jpg" alt="Go Version" /></p>
+
+<h3 id="your-first-program-in-go">Your First Program in Go</h3>
+
+<p>Traditionally the first program you write in any programming language is called a “Hello World” program – a program that simply outputs Hello World to your terminal. Let’s write one using Go.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+<span class="k">import</span> <span class="s">"fmt"</span>
+<span class="c">// this is a comment</span>
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+ <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"Hello World"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Make sure your file is identical to what is shown here and save it as <code class="highlighter-rouge">main.go</code>.</p>
+
+<p>By seeing the code above</p>
+:ET
