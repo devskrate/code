@@ -23,8 +23,11 @@ func main() {
         <h4 class="nav__title"><!-- <i class="fas fa-cog"></i> -->
          Table of Contents</h4>
       </header>
-      {% toc %}
-      </nav>
+
+  * Do not remove this line (it will not be displayed)
+{:toc}
+
+  </nav>
 </aside>
 
 <p><button class="btn js-toggle-dark-mode">Preview dark color scheme</button></p>
